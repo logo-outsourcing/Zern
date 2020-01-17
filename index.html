@@ -191,7 +191,7 @@
                             <h2 class="banner__title"><span class="banner__subtitle">Пластинчатые перекрёстные</span>
                                 РЕКУПЕРАТОРЫ</h2>
                         </div>
-                        <div class="banner__info">
+                        <div class="banner__info banner__info--spacing" >
                             <p class="banner__paragraph">Пластины рекуператора изготовлены из специального ударопрочного
                                 полистирола толщиной от 0,2 мм до 0,3 мм стандартно. Данный
                                 материал имеет высокую теплопроводность и эксплуатационные характеристики</p>
@@ -210,7 +210,7 @@
                             <h2 class="banner__title"><span class="banner__subtitle">Пластинчатые противоточные</span>
                                 РЕКУПЕРАТОРЫ</h2>
                         </div>
-                        <div class="banner__info banner__info--inner">
+                        <div class="banner__info banner__info--inner banner__info--spacing">
                             <p class="banner__paragraph">Противоточные рекуператоры серии НС-ЕХ6 специально разработаны
                                 для утилизации тепла в сбалансированных системах вентиляции помещений. Эти рекуператоры
                                 позволяют эффективно использовать энергию вытяжного воздуха, выработанную для отопления
@@ -228,7 +228,7 @@
                         <div class="banner__name banner__name--inner">
                             <h2 class="banner__title">Приводы</h2>
                         </div>
-                        <div class="banner__info banner__info--inner">
+                        <div class="banner__info banner__info--inner banner__info--spacing">
                             <p class="banner__paragraph">Приводы с усилием 5 Нм предназначены для управления заслонками
                                 площадью сечения 1 м2, выполняющими охранные функции впротивопожарных системах
                                 вентиляции и дымоудаления. Компактные габариты позволяют осуществлять монтаж в
@@ -269,45 +269,60 @@
     </section>
 </div>
 <section class="reach">
-    <div class="reach__map"></div>
     <div class="reach__wrap content-row">
         <div class="reach__sales">
             <h2 class="reach__title">Отдел продаж</h2>
-            <p class="reach__text">По вопросам поставки продукции
+            <p class="reach__text reach__text--inner">По вопросам поставки продукции
                 по территории Украины </p>
-            <a href="#" class="reach__link">(044) 406-36-27
-                <span class="reach__text">многоканальный</span>
-            </a>
-            <a href="#" class="reach__link">(044) 406-07-50</a>
-            <a href="#" class="reach__link">sale@vents.ua</a>
-            <p class="reach__link">Украина, 01030, г. Киев,
-                ул. М. Коцюбинского, 1</p>
+            <div class="reach__info">
+                <a href="#" class="reach__link reach__link--inner content-row">
+                    <img src="img/home/call.png" alt="" class="reach__icon">
+                    <span>(044) 406-36-27
+                    <span class="reach__text">многоканальный</span></span>
+                </a>
+                <a href="#" class="reach__link content-row"> <img src="img/home/call.png" alt="" class="reach__icon">(044)
+                    406-07-50</a>
+                <a href="#" class="reach__link content-row"> <img src="img/home/email.png" alt=""
+                                                                  class="reach__icon--inner">sale@vents.ua</a>
+                <p class="reach__link content-row reach__link--inner"><img src="img/home/location.png" alt=""
+                                                                           class="reach__icon--inner">Украина, 01030, г.
+                    Киев,<br>
+                    ул. М. Коцюбинского, 1</p>
+            </div>
         </div>
         <div class="reach__contact">
             <h2 class="reach__title reach__contact--title">СВЯЗАТЬСЯ С НАМИ</h2>
             <form class="content-row  reach__form">
                 <div class="reach__inner">
                     <div class="content-row reach__string">
-                        <input class="reach__input" type="text" placeholder="Фамилия, Имя">
-                        <input class="reach__input" type="text" placeholder="Компания">
+                        <input class="reach__input reach__input--name" type="text" placeholder="Фамилия, Имя">
+                        <input class="reach__input reach__input--company" type="text" placeholder="Компания">
                     </div>
                     <div class="content-row reach__string">
-                        <input class="reach__input" type="text" placeholder="Страна">
-                        <input class="reach__input" type="text" placeholder="Город">
+                        <input class="reach__input reach__input--country" type="text" placeholder="Страна">
+                        <input class="reach__input reach__input--city" type="text" placeholder="Город">
                     </div>
                     <div class="content-row reach__string">
-                        <input class="reach__input" type="text" placeholder="Причина обращения">
-                        <input class="reach__input" type="email" placeholder="E-mail">
+                        <select class="reach__input reach__input--question reach__select" name="select">
+                            <option value="value1" selected>Причина обращения</option>
+                            <option value="value2">Причина 1</option>
+                            <option value="value3">Причина 2</option>
+                            <option value="value4">Причина 3</option>
+                        </select>
+                        <input class="reach__input reach__input--email" type="email" placeholder="E-mail">
                     </div>
                     <textarea class="reach__input reach__textarea" placeholder="Текст Вашего сообщения..." rows="5"
                               cols="50"></textarea>
                 </div>
                 <div class="reach__send">
-                    <div class="reach__captcha">
+                    <div class="reach__captcha container">
                         <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
                         <div class="text-danger" id="recaptchaError"></div>
                     </div>
-                    <button class="content-button content-row reach__button">Отправить</button>
+                    <button class="content-button content-row reach__button">Отправить <img src="img/home/email.png"
+                                                                                            alt="email"
+                                                                                            class="reach__button--icon">
+                    </button>
                     <div class="content-row">
                         <input type="checkbox" class="reach__checkbox">
                         <label class="reach__label">Я согласен с условиями использования сайта
@@ -319,44 +334,52 @@
         </div>
 
     </div>
+    <div class="reach__map"></div>
 </section>
 <footer class="footer">
     <div class="footer__navigation">
         <div class="content-container content-row">
             <ul class="content-row footer__menu">
-               <li class="footer__item footer__catalog">
-                   <a href="#" class="footer__link">Каталог</a>
-                   <ul class="footer__submenu">
-                       <li class="footer__dropdown content-row">
-                           <a href="#" class="footer__dropdown--link ">Рекуператоры</a>
-                           <ul class="content-row footer__list">
-                               <li class="footer__dropdown--item">
-                                   <a href="#" class="footer__dropdown--element">Пластинчатые рекуператоры противоточного типа</a>
-                               </li>
-                               <li class="footer__dropdown--item">
-                                   <a href="#" class="footer__dropdown--element">Энтальпийные рекуператоры перекрёстного типа</a>
-                               </li>
-                               <li class="footer__dropdown--item">
-                                   <a href="#" class="footer__dropdown--element">Пластинчатые рекуператоры противоточного типа</a>
-                               </li>
-                           </ul>
-                       </li>
-                       <li class="footer__dropdown content-row">
-                           <a href="#" class="footer__dropdown--link ">Вентиляторы</a>
-                           <ul class="content-row  footer__list">
-                               <li class="footer__dropdown--item">
-                                   <a href="#" class="footer__dropdown--element">Пластинчатые рекуператоры перекрёстного типа</a>
-                               </li>
-                               <li class="footer__dropdown--item">
-                                   <a href="#" class="footer__dropdown--element">Энтальпийные рекуператоры противоточного типа</a>
-                               </li>
-                               <li class="footer__dropdown--item">
-                                   <a href="#" class="footer__dropdown--element">Роторные рекуператоры</a>
-                               </li>
-                           </ul>
-                       </li>
-                   </ul>
-               </li>
+                <li class="footer__item footer__catalog">
+                    <a href="#" class="footer__link footer__catalog--link">Каталог</a>
+                    <ul class="footer__submenu">
+                        <li class="footer__dropdown content-row">
+                            <a href="#" class="footer__dropdown--link footer__dropdown--activ content-row">Рекуператоры
+                                <img src="img/home/arrow_footer.svg" alt="arrow"></a>
+                            <ul class="content-row footer__list">
+                                <li class="footer__dropdown--item">
+                                    <a href="#" class="footer__dropdown--element">Пластинчатые рекуператоры
+                                        противоточного типа</a>
+                                </li>
+                                <li class="footer__dropdown--item">
+                                    <a href="#" class="footer__dropdown--element">Энтальпийные рекуператоры
+                                        перекрёстного типа</a>
+                                </li>
+                                <li class="footer__dropdown--item">
+                                    <a href="#" class="footer__dropdown--element">Пластинчатые рекуператоры
+                                        противоточного типа</a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer__dropdown content-row">
+                            <a href="#" class="footer__dropdown--link content-row">Вентиляторы<img
+                                    src="img/home/arrow_footer.svg" alt="arrow"></a>
+                            <ul class="content-row  footer__list">
+                                <li class="footer__dropdown--item">
+                                    <a href="#" class="footer__dropdown--element">Пластинчатые рекуператоры
+                                        перекрёстного типа</a>
+                                </li>
+                                <li class="footer__dropdown--item">
+                                    <a href="#" class="footer__dropdown--element">Энтальпийные рекуператоры
+                                        противоточного типа</a>
+                                </li>
+                                <li class="footer__dropdown--item">
+                                    <a href="#" class="footer__dropdown--element">Роторные рекуператоры</a>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </li>
                 <li class="footer__item">
                     <a href="#" class="footer__link">ZERN selector</a>
                 </li>
