@@ -1,3 +1,8 @@
+$('.header__menu--open').click(function (e) {
+    e.preventDefault();
+    $('.header__navigation').toggleClass('header__navigation--open');
+    $('.header__menu--open').toggleClass('header__menu--close');
+});
 $('.banner__slider').slick({
     dots: true,
     arrows: true,
