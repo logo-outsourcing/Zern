@@ -1,0 +1,291 @@
+.about {
+  background: #e0e0e0;
+  padding: 34px 0 43px;
+  &__list {
+    margin-bottom: 36px;
+  }
+  &__navigation {
+    font-family: "Roboto", sans-serif;
+    font-size: 12px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #738497;
+
+  }
+  &__link {
+    text-decoration: none;
+    &:hover {
+      color: #f5c90e;
+    }
+  }
+  &__item {
+    margin-right: 10px;
+    align-items: center;
+  }
+  &__info {
+    justify-content: space-between;
+    padding: 38px 0 0;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      border-top: 1px solid #b1b1b1;
+    }
+  }
+  &__title {
+    font-family: "Century Gothic Bold", sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #26292b;
+    margin-bottom: 30px;
+  }
+  &__text {
+    font-family: "Century Gothic Regular", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 400;
+    color: #231f20;
+    width: 75%;
+    &--name {
+      font-weight: 700;
+      text-transform: uppercase;
+      color: #2c2c2c;
+    }
+  }
+}
+
+.product {
+  background: url("../../img/about/product-background.jpg") no-repeat;
+  background-size: cover;
+  padding: 57px 0 42px;
+  &__box {
+    background: url("../../img/about/mask.png") no-repeat;
+    background-position: left bottom;
+    background-size: cover;
+    justify-content: space-between;
+    margin-bottom: 60px;
+  }
+  &__heading {
+    justify-content: space-between;
+    background: #62a26d;
+    width: 56%;
+    padding: 15px 23px;
+    box-sizing: border-box;
+    box-shadow: 0px -2px 5px 0px rgba(0,0,0,0.31);
+  }
+  &__title {
+    font-family: "Century Gothic Bold", sans-serif;
+    font-size: 24px;
+    line-height: 1.2;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #26292b;
+    margin: 14px 0;
+  }
+  &__text {
+    font-family: "Century Gothic Regular", sans-serif;
+    font-size: 17px;
+    line-height: 1.2;
+    font-weight: 700;
+    color: #ffffff;
+  }
+  &__more {
+    text-decoration: none;
+    justify-content: flex-end;
+    width: 32%;
+  }
+  &__info {
+    justify-content: space-between;
+  }
+  &__list {
+    width: 24%;
+  }
+  &__item {
+    font-family: "Century Gothic Regular", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #2c2c2c;
+    margin-bottom: 28px;
+    align-items: flex-start;
+    &--name {
+      text-transform: uppercase;
+      font-size: 18px;
+      min-height: 54px;
+      margin-bottom: 51px;
+    }
+    &--text {
+      width: 70%;
+    }
+  }
+  &__image {
+    margin-right: 4%;
+  }
+  &__icon {
+    margin-right: 15%;
+  }
+}
+
+.product__heading .product__more {
+  text-transform: inherit;
+  border-width: 1px;
+}
+
+@media screen and (max-width: 1200px){
+  .about__title {
+    margin-bottom: 25px;
+  }
+  .about__info {
+    padding: 29px 0 0;
+  }
+  .about__text {
+    width: 73%;
+  }
+  .about {
+    padding: 34px 0 56px;
+  }
+  .product {
+    padding: 54px 0 34px;
+  }
+  .product__heading {
+    width: 69%;
+  }
+  .product__info {
+   flex-wrap: wrap;
+  }
+  .product__list {
+    width: 50%;
+    margin-bottom: 39px
+  }
+
+  .product__item {
+    padding: 0 18px;
+  }
+  .product__item--name {
+    margin-bottom: 29px;
+    padding: 0;
+  }
+  .product__icon {
+    margin-right: 7%;
+  }
+  .product__item--inner{
+    width: 50%;
+    margin-bottom: 60px;
+    & .product__image{
+      margin-right: 13%;
+    }
+  }
+}
+@media screen and (max-width: 990px){
+  .about__text {
+    width: 65%;
+  }
+  .product .product__box {
+    background: none;
+    flex-direction: column;
+  }
+  .product__heading {
+    width: 100%;
+  }
+  .product__more {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 768px){
+  .about {
+    padding: 27px 0 44px;
+  }
+  .about__title {
+    margin-bottom: 18px;
+  }
+  .about__info {
+    padding: 25px 0 0;
+    align-items: center;
+  }
+  .about__text {
+    font-size: 14px;
+    line-height: 20px;
+    width: 61%;
+  }
+  .product {
+    padding: 21px 0 0;
+  }
+
+  .product__title {
+    margin: 14px 0 30px;
+  }
+
+
+  .product__list {
+    margin-bottom: 66px;
+  }
+  .product__list--inner{
+    margin-bottom: 25px;
+  }
+}
+
+@media screen and (max-width: 568px){
+  .about {
+    padding: 59px 0 10px;
+  }
+  .about__list {
+    margin-bottom: 24px;
+  }
+  .about__title {
+    font-size: 19px;
+  }
+  .about .about__info {
+   flex-direction: column;
+    align-items: flex-start;
+  }
+  .about__text {
+    width: 100%;
+    margin-top: 14px;
+    text-align: justify;
+  }
+  .product__list {
+    width: 100%;
+    margin-bottom: 5px;
+  }
+  .product__title {
+    font-size: 19px;
+  }
+  .product .product__heading {
+    flex-direction: column;
+    padding: 15px 23px 31px;
+    align-items: center;
+  }
+  .product__text {
+    line-height: 23px;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  .product__more {
+    width: 81%;
+    padding: 9px 0;
+  }
+  .product__box {
+    margin-bottom: 45px;
+  }
+  .product__image {
+    margin-right: 7%;
+  }
+  .product__icon {
+    margin-right: 14%;
+  }
+  .product__item--inner {
+    width: 87%;
+    margin-bottom: 33px;
+  }
+  .product .product__item{
+    align-items: center;
+  }
+
+  .product__item--text {
+    width: 73%;
+  }
+}
