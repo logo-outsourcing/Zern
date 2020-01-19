@@ -62,6 +62,7 @@ $(window).ready(function(){
 });
 
 
+
 var map = $('.reach__map')[0];
 var uluru = {lat: 49.5687689, lng: 34.5858791};
 var map1 = new google.maps.Map(map,
@@ -99,6 +100,8 @@ var marker = new google.maps.Marker({
     icon: "img/home/marker.svg",
     title: 'Кленовая Улица д.2'
 });
+
+
 
 // 1. Получить ответ гугл капчи
 // var captcha = grecaptcha.getResponse();
