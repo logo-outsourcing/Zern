@@ -13,6 +13,51 @@ $('.banner__slider').slick({
     prevArrow: ".banner__prev",
     nextArrow: ".banner__next",
 });
+$(".header__modal").each( function(){
+    $(this).wrap('<div class="header__overlay"></div>')
+});
+
+$(".open-modal").on('click', function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation;
+
+    var $this = $(this),
+        modal = $($this).data("modal");
+
+    $(modal).parents(".header__overlay").addClass("header__modal--open");
+    setTimeout( function(){
+        $(modal).addClass("header__modal--open");
+    }, 350);
+
+    $(document).on('click', function(e){
+        var target = $(e.target);
+
+        if ($(target).hasClass("header__overlay")){
+            $(target).find(".header__modal").each( function(){
+                $(this).removeClass("header__modal--open");
+            });
+            setTimeout( function(){
+                $(target).removeClass("header__modal--open");
+            }, 350);
+        }
+
+    });
+
+});
+
+$(".close-modal").on('click', function(e){
+    e.preventDefault();
+    e.stopImmediatePropagation;
+
+    var $this = $(this),
+        modal = $($this).data("modal");
+
+    $(modal).removeClass("header__modal--open");
+    setTimeout( function(){
+        $(modal).parents(".header__overlay").removeClass("header__modal--open");
+    }, 350);
+
+});
 
 var map = $('.reach__map')[0];
 var uluru = {lat: 49.5687689, lng: 34.5858791};

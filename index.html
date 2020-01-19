@@ -95,8 +95,9 @@
                                                               class="header__icon ">О компании</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link"><img src="img/home/telegram.svg" alt="Связаться с нами"
-                                                              class="header__icon ">Связаться с нами</a>
+                        <a href="#" class="header__link btn open-modal" data-modal="#modal1"><img
+                                src="img/home/telegram.svg" alt="Связаться с нами"
+                                class="header__icon ">Связаться с нами</a>
                     </li>
                 </ul>
                 <form class="header__form content-row">
@@ -156,6 +157,91 @@
                 </div>
             </div>
             <button class="header__menu--open"></button>
+        </div>
+        <div class="header__modal" id="modal1">
+            <div class="header__modal--content">
+                <div class="header__modal--heading">
+                    <h2 class="header__modal--title">Свяжитесь с нами</h2>
+                    <p class="header__modal--text">Для получения оптимального уровня обслуживания<br>
+                        пожалуйста заполните форму и укажите причину обращения.</p>
+                </div>
+                <div>
+                    <form class="header__modal--form">
+                        <div class="header__inner">
+                            <div class="content-row reach__box">
+                                <div class="reach__element ">
+                                    <input class="header__modal--input reach__input reach__input--name" type="text"
+                                           placeholder="Фамилия, Имя">
+                                    <input class="header__modal--input reach__input reach__input--country" type="text"
+                                           placeholder="Страна">
+                                    <select class="header__modal--input reach__input reach__input--question reach__select"
+                                            name="select">
+                                        <option value="value1" selected>Причина обращения</option>
+                                        <option value="value2">Причина 1</option>
+                                        <option value="value3">Причина 2</option>
+                                        <option value="value4">Причина 3</option>
+                                    </select>
+                                </div>
+                                <div class="reach__element">
+                                    <input class="header__modal--input reach__input reach__input--company" type="text"
+                                           placeholder="Компания">
+                                    <input class="header__modal--input reach__input reach__input--city" type="text"
+                                           placeholder="Город">
+                                    <input class="header__modal--input reach__input reach__input--email" type="email"
+                                           placeholder="E-mail">
+                                </div>
+                            </div>
+                            <textarea class="header__modal--textarea header__modal--input reach__input reach__textarea"
+                                      placeholder="Текст Вашего сообщения..."
+                                      rows="5"
+                                      cols="50"></textarea>
+                        </div>
+                        <div class="header__send content-row">
+                            <div class="reach__captcha header__captcha container">
+                                <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
+                                <div class="text-danger" id="recaptchaError"></div>
+                            </div>
+                            <div class="header__conditions">
+                                <button class="header__modal--button content-button content-row reach__button">Отправить <img
+                                        src="img/home/email.png"
+                                        alt="email"
+                                        class="reach__button--icon">
+                                </button>
+                                <div class="content-row">
+                                    <input type="checkbox" class="reach__checkbox">
+                                    <label class="header__label reach__label">Я согласен с условиями использования сайта
+                                        и политикой конфиденциальности</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <div class="header__modal--footer content-row">
+                    <div class="header__box">
+                        <h2 class="header__subtitle reach__title">Отдел продаж</h2>
+                        <p class="header__modal--text reach__text ">По вопросам поставки продукции
+                            по территории Украины </p>
+                        <p class="header__adreess  reach__link content-row reach__link--inner"><img src="img/home/location.png" alt=""
+                                                                                   class="reach__icon--inner">Украина,
+                            01030, г.
+                            Киев,<br>
+                            ул. М. Коцюбинского, 1</p>
+                    </div>
+                    <div class="header__info reach__info">
+                        <a href="#" class="header__modal--link reach__link reach__link--inner content-row">
+                            <img src="img/home/call.png" alt="" class="reach__icon">
+                            <span>(044) 406-36-27
+                    <span class="reach__text">многоканальный</span></span>
+                        </a>
+                        <a href="#" class="header__modal--link reach__link content-row"> <img src="img/home/call.png" alt=""
+                                                                          class="reach__icon">(044)
+                            406-07-50</a>
+                        <a href="#" class="header__modal--link reach__link content-row"> <img src="img/home/email.png" alt=""
+                                                                          class="reach__icon--inner">sale@vents.ua</a>
+                    </div>
+                </div>
+                <a class='close-modal' data-modal="#modal1" href="#">x</a>
+            </div>
         </div>
     </div>
 </header>
@@ -297,22 +383,22 @@
             <h2 class="reach__title reach__contact--title">СВЯЗАТЬСЯ С НАМИ</h2>
             <form class="content-row  reach__form">
                 <div class="reach__inner">
-                    <div class="content-row reach__string">
-                        <input class="reach__input reach__input--name" type="text" placeholder="Фамилия, Имя">
-                        <input class="reach__input reach__input--company" type="text" placeholder="Компания">
-                    </div>
-                    <div class="content-row reach__string">
-                        <input class="reach__input reach__input--country" type="text" placeholder="Страна">
-                        <input class="reach__input reach__input--city" type="text" placeholder="Город">
-                    </div>
-                    <div class="content-row reach__string">
-                        <select class="reach__input reach__input--question reach__select" name="select">
-                            <option value="value1" selected>Причина обращения</option>
-                            <option value="value2">Причина 1</option>
-                            <option value="value3">Причина 2</option>
-                            <option value="value4">Причина 3</option>
-                        </select>
-                        <input class="reach__input reach__input--email" type="email" placeholder="E-mail">
+                    <div class="content-row reach__box">
+                        <div class="reach__element reach__element--inner">
+                            <input class="reach__input reach__input--name" type="text" placeholder="Фамилия, Имя">
+                            <input class="reach__input reach__input--country" type="text" placeholder="Страна">
+                            <select class="reach__input reach__input--question reach__select" name="select">
+                                <option value="value1" selected>Причина обращения</option>
+                                <option value="value2">Причина 1</option>
+                                <option value="value3">Причина 2</option>
+                                <option value="value4">Причина 3</option>
+                            </select>
+                        </div>
+                        <div class="reach__element">
+                            <input class="reach__input reach__input--company" type="text" placeholder="Компания">
+                            <input class="reach__input reach__input--city" type="text" placeholder="Город">
+                            <input class="reach__input reach__input--email" type="email" placeholder="E-mail">
+                        </div>
                     </div>
                     <textarea class="reach__input reach__textarea" placeholder="Текст Вашего сообщения..." rows="5"
                               cols="50"></textarea>
@@ -320,7 +406,7 @@
                 <div class="reach__send">
                     <div class="reach__captcha container">
                         <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
-                        <div class="text-danger" id="recaptchaError"></div>
+                        <div class="text-danger" id="recaptchaError2"></div>
                     </div>
                     <button class="content-button content-row reach__button">Отправить <img src="img/home/email.png"
                                                                                             alt="email"
@@ -385,22 +471,22 @@
             <li class="footer__item">
                 <a href="#" class="footer__link">ZERN selector</a>
             </li>
-            <li class="footer__item">
+            <li class="footer__item footer__item--small">
                 <a href="#" class="footer__link">Контакты</a>
             </li>
             <li class="footer__item">
                 <a href="#" class="footer__link">О компании</a>
             </li>
-            <li class="footer__item">
+            <li class="footer__item footer__item--average">
                 <a href="#" class="footer__link">Связаться с нами</a>
             </li>
             <li class="footer__item">
                 <a href="#" class="footer__link">Карта сайта</a>
             </li>
-            <li class="footer__item">
+            <li class="footer__item footer__item--small">
                 <a href="#" class="footer__link">Imprint</a>
             </li>
-            <li class="footer__item">
+            <li class="footer__item footer__item--big">
                 <a href="#" class="footer__link">Политика конфиденциальности</a>
             </li>
         </ul>
