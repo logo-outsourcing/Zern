@@ -1,6 +1,7 @@
 @import "home";
 @import "about";
 @import "contact";
+
 @font-face {
   font-family: 'Century Gothic Regular';
   src: url('../../fonts/CenturyGothic.eot');
@@ -74,7 +75,6 @@
     bottom: 0;
   }
 }
-
 
 @media screen and (max-width: 1700px) {
   .footer__dropdown--link {
@@ -465,6 +465,21 @@
     flex-flow: row-reverse;
   }
 
+  .header__search--element {
+    flex-flow: wrap;
+    padding: 0;
+    justify-content: flex-start;
+  }
+
+  .header__search--result {
+    margin: 0 5px;
+  }
+
+  .header__search--more {
+    justify-content: space-around;
+  }
+
+
   .header__icon {
     order: 2;
     margin-left: 10px;
@@ -518,7 +533,9 @@
   .header__arrow--dropdown {
     transform: rotate(90deg);
   }
-
+  .header__search--arrow{
+    transform: rotate(-90deg);
+  }
   .example__wrap {
     padding: 29px 32px 0;
   }
@@ -958,6 +975,7 @@
   .header__modal .header__captcha {
     width: 48%;
   }
+
 }
 
 @media screen and (max-width: 636px) {
@@ -1068,6 +1086,7 @@
     top: 85px;
     left: 1%;
     width: 97%;
+    z-index: 9;
   }
 
   .content-wrap {
@@ -1196,28 +1215,44 @@
     width: 100%;
     flex-direction: column;
   }
+
   .header__modal--footer {
-   flex-direction: column;
+    flex-direction: column;
     padding: 33px 11%;
     text-align: center;
   }
+
   .header__box {
     width: 100%;
     margin-bottom: 12px;
-    &:after{
+    &:after {
       bottom: -38px;
       right: auto;
       left: auto;
       transform: rotate(90deg);
     }
   }
+
   .header__conditions {
     width: 100%;
   }
+
   .header__info {
     width: 100%;
   }
+
   .header__modal .header__captcha {
     width: 100%;
+  }
+
+  .header__form:hover .header__search {
+    top: 35px;
+    width: 100%;
+  }
+
+  .header__search--element {
+    flex-flow: wrap;
+    padding: 0;
+    justify-content: flex-start;
   }
 }

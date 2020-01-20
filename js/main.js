@@ -60,46 +60,132 @@ $(window).ready(function(){
 
     });
 });
+'use strick';
+
+(function ($) {
+    $(document).ready(function () {
+        var uluru = {lat: 49.5687689, lng: 34.5858791};
+        if($("div").is(".reach__map")){
+            map = new google.maps.Map(document.getElementById ('map'), {
+                center: uluru,
+                zoom: 3,
+            });
+            var pos1 = new google.maps.LatLng(50.4374807, 30.6095538);
+            var pos2 = new google.maps.LatLng(-4.0101626, 17.2339139);
+            var pos3 = new google.maps.LatLng(4.6420843, -78.8351989);
+            var pos4 = new google.maps.LatLng(15.7583519, 101.4151049);
+            var marker = new google.maps.Marker({
+                position: pos1,
+                map: map,
+                title: '',
+                icon: "img/home/marker.svg"
 
 
+            });
+            var marker = new google.maps.Marker({
+                position: pos2,
+                map: map,
+                icon: "img/home/marker.svg",
+                title: 'Кленовая Улица д.2'
+            });
+            var marker = new google.maps.Marker({
+                position: pos3,
+                map: map,
+                icon: "img/home/marker.svg",
+                title: 'Кленовая Улица д.2'
+            });
+            var marker = new google.maps.Marker({
+                position: pos4,
+                map: map,
+                icon: "img/home/marker.svg",
+                title: 'Кленовая Улица д.2'
+            });
+        } else {
+            return;
+        }
 
-var map = $('.reach__map')[0];
-var uluru = {lat: 49.5687689, lng: 34.5858791};
-var map1 = new google.maps.Map(map,
-    {
-        center: uluru,
-        zoom: 3
-    });
-var pos1 = new google.maps.LatLng(50.4374807, 30.6095538);
-var pos2 = new google.maps.LatLng(-4.0101626, 17.2339139);
-var pos3 = new google.maps.LatLng(4.6420843, -78.8351989);
-var pos4 = new google.maps.LatLng(15.7583519, 101.4151049);
-var marker = new google.maps.Marker({
-    position: pos1,
-    map: map1,
-    title: '',
-    icon: "img/home/marker.svg"
+    })
+})(jQuery);
+(function ($) {
+    $(document).ready(function () {
+        if($("div").is(".manufacturing__map")){
+            map2 = new google.maps.Map(document.getElementById ('map2'), {
+                center: {lat: 55.6796158, lng: 29.9771609},
+                zoom: 3,
+            });
+            var pos1 = new google.maps.LatLng(40.4381311, -3.8196196);
+            var pos2 = new google.maps.LatLng(50.9085284, 16.916228);
+            var pos3 = new google.maps.LatLng(47.5811346, 31.2783761);
+            var pos4 = new google.maps.LatLng(41.6739767, 37.932022);
+            var marker = new google.maps.Marker({
+                position: pos1,
+                map: map2,
+                title: '',
+                icon: "img/home/marker.svg"
+            });
+            var marker = new google.maps.Marker({
+                position: pos2,
+                map: map2,
+                icon: "img/home/marker.svg",
+                title: 'Кленовая Улица д.2'
+            });
+            var marker = new google.maps.Marker({
+                position: pos3,
+                map: map2,
+                icon: "img/home/marker.svg",
+                title: 'Кленовая Улица д.3'
+            });
+            var marker = new google.maps.Marker({
+                position: pos4,
+                map: map2,
+                icon: "img/home/marker.svg",
+                title: 'Кленовая Улица д.4'
+            });
+        } else {
+            return;
+        }
+
+    })
+})(jQuery);
 
 
-});
-var marker = new google.maps.Marker({
-    position: pos2,
-    map: map1,
-    icon: "img/home/marker.svg",
-    title: 'Кленовая Улица д.2'
-});
-var marker = new google.maps.Marker({
-    position: pos3,
-    map: map1,
-    icon: "img/home/marker.svg",
-    title: 'Кленовая Улица д.2'
-});
-var marker = new google.maps.Marker({
-    position: pos4,
-    map: map1,
-    icon: "img/home/marker.svg",
-    title: 'Кленовая Улица д.2'
-});
+// var map = $('.reach__map')[0];
+// var uluru = {lat: 49.5687689, lng: 34.5858791};
+// var map1 = new google.maps.Map(map,
+//     {
+//         center: uluru,
+//         zoom: 3
+//     });
+// var pos1 = new google.maps.LatLng(50.4374807, 30.6095538);
+// var pos2 = new google.maps.LatLng(-4.0101626, 17.2339139);
+// var pos3 = new google.maps.LatLng(4.6420843, -78.8351989);
+// var pos4 = new google.maps.LatLng(15.7583519, 101.4151049);
+// var marker = new google.maps.Marker({
+//     position: pos1,
+//     map: map1,
+//     title: '',
+//     icon: "img/home/marker.svg"
+//
+//
+// });
+// var marker = new google.maps.Marker({
+//     position: pos2,
+//     map: map1,
+//     icon: "img/home/marker.svg",
+//     title: 'Кленовая Улица д.2'
+// });
+// var marker = new google.maps.Marker({
+//     position: pos3,
+//     map: map1,
+//     icon: "img/home/marker.svg",
+//     title: 'Кленовая Улица д.2'
+// });
+// var marker = new google.maps.Marker({
+//     position: pos4,
+//     map: map1,
+//     icon: "img/home/marker.svg",
+//     title: 'Кленовая Улица д.2'
+// });
 
 
 
