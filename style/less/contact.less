@@ -100,16 +100,19 @@
 }
 
 .manufacturing {
-  background-color: #9b9b9b;
+  background: url("../../img/contact/contacts_background.png") no-repeat;
+  background-size: cover;
   position: relative;
   padding: 40px 0;
+  z-index: 99;
   &:before {
     content: "";
     position: absolute;
-    top: -25px;
+    top: -24px;
     left: 0;
     height: 25px;
     width: 100%;
+    z-index: 99;
     background: url("../../img/contact/mask.png") no-repeat;
   }
   &__title {
