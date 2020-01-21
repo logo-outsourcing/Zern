@@ -1,0 +1,456 @@
+.hat {
+  background: url("../../img/drives/hat-background.png") no-repeat;
+  background-size: cover;
+  padding: 45px 0 54px;
+  &__wrap {
+    width: 37%;
+    margin: 0 auto;
+    text-align: center;
+  }
+  &__title {
+    font-family: "Century Gothic Regular", sans-serif;
+    font-size: 26px;
+    line-height: 1.2;
+    font-weight: 400;
+    text-transform: uppercase;
+    color: #bfbfc0;
+    margin-bottom: 25px;
+  }
+  &__link {
+    box-shadow: 0 4px 9px 0 rgba(0, 0, 0, 0.2);
+    font-family: "Century Gothic Bold", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffe100;
+    text-decoration: none;
+    padding: 14px 21px;
+    position: relative;
+    background-size: cover;
+    width: 48%;
+    text-align: left;
+    box-sizing: border-box;
+    border: 1.0px solid rgba(255, 255, 255, 0.63);
+    background-size: cover;
+    background: url("../../img/drives/link-background.png") no-repeat;
+    &--download {
+
+    }
+    &--look {
+      color: #c6c7c7;
+      padding: 14px 35px;
+
+    }
+
+  }
+  &__icon {
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 45px;
+    height: 44px;
+  }
+  &__image {
+    margin-bottom: 10px;
+  }
+  &__wrapper {
+    justify-content: space-between;
+  }
+}
+
+.drives {
+  padding: 40px 0;
+  &__title {
+    font-family: "Century Gothic Bold", sans-serif;
+    font-size: 24px;
+    line-height: 34px;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #1f2122;
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      height: 5px;
+      background-color: #ffd103;
+    }
+  }
+  &__info {
+    font-family: "Century Gothic Regular", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #000000;
+    margin-bottom: 13px;
+    width: 93%;
+    &--inner {
+      width: 70%;
+    }
+  }
+  &__description {
+    font-family: "Century Gothic Regular", sans-serif;
+    font-size: 16px;
+    line-height: 1.2;
+    font-weight: 400;
+    color: #000000;
+    text-align: justify;
+    margin-bottom: 35px;
+    &--bold {
+      font-weight: 700;
+      display: block;
+    }
+    &--inner {
+      display: block;
+    }
+  }
+  &__icon {
+    margin-right: 13px;
+  }
+  &__list {
+    margin-bottom: 70px;
+  }
+  &__heading {
+    align-items: flex-end;
+    margin-bottom: 20px;
+  }
+  &__text {
+    width: 50%;
+    box-sizing: border-box;
+    &--left {
+      padding-right: 8%;
+    }
+    &--right {
+      padding-left: 7%;
+    }
+  }
+  &__picture {
+    position: relative;
+    width: 50%;
+    padding-top: 63px;
+    box-sizing: border-box;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 38px;
+      background: url("../../img/drives/shadow.png") no-repeat;
+    }
+    &--left:after {
+      left: 0;
+    }
+    &--right:after {
+      right: 0;
+      transform: rotate(180deg);
+    }
+    &--inner {
+      padding-top: 0;
+    }
+    &--innerTwo {
+      padding-top: 35px;
+    }
+  }
+  &__button {
+    position: absolute;
+    &--right {
+      right: 0;
+      top: 22px;
+    }
+    &--left {
+      left: 0;
+      top: 9px;
+    }
+  }
+  &__more {
+    text-decoration: none;
+    background: #565a5e;
+    color: #feb900;
+    font-family: 'Century Gothic Regular', sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    width: 26%;
+    padding: 12px 5px;
+    box-sizing: border-box;
+    justify-content: flex-end;
+    align-items: center;
+    &--right {
+      margin-left: auto;
+    }
+    &--left {
+      margin-right: auto;
+    }
+    &--icon {
+      width: 30px;
+      height: 5px;
+
+    }
+  }
+  &__transform {
+    transform: rotate(180deg);
+  }
+  &__element {
+    margin-bottom: 18px;
+    &--two {
+      margin-bottom: 100px;
+    }
+    &--three {
+      margin-bottom: 41px;
+    }
+    &--fo {
+      margin-bottom: 0;
+    }
+  }
+}
+
+.drives .drives__more--left {
+  flex-flow: row-reverse;
+}
+
+@media screen and (max-width: 1200px) {
+  .hat {
+    padding: 42px 0 30px;
+  }
+
+  .hat__wrap {
+    width: 45%;
+  }
+
+  .hat__title {
+    margin-bottom: 50px;
+  }
+
+  .hat__image {
+    margin-bottom: 7px;
+  }
+
+  .drives {
+    padding: 40px 0 0;
+  }
+
+  .drives__list {
+    margin-bottom: 64px;
+  }
+
+  .drives__text--left {
+    padding-right: 1%;
+  }
+
+  .drives__text--right {
+    padding-left: 1%;
+  }
+
+  .drives__icon {
+    margin-right: 17px;
+  }
+
+  .drives__heading {
+    margin-bottom: 15px;
+  }
+
+  .drives__info {
+    font-size: 14px;
+    line-height: 20px;
+  }
+
+  .drives__description {
+    font-size: 14px;
+    line-height: 20px;
+    margin-bottom: 20px;
+  }
+
+  .drives__image {
+    width: 87%;
+  }
+
+  .drives__picture {
+    padding-top: 80px;
+    &--inner {
+      padding-top: 45px;
+    }
+  }
+
+  .drives__element {
+    margin-bottom: 41px;
+    &--two {
+      margin-bottom: 123px;
+    }
+    &--three {
+      margin-bottom: 0;
+    }
+    &--fo {
+      margin-bottom: 18px;
+    }
+  }
+}
+@media screen and (max-width: 990px){
+  .hat__wrap {
+    width: 60%;
+  }
+  .drives__more {
+    width: 35%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hat {
+    padding: 35px 0 65px;
+  }
+
+  .hat__wrap {
+    width: 73%;
+  }
+
+  .hat__image {
+    margin-bottom: 3px;
+  }
+
+  .hat__title {
+    font-size: 24px;
+    margin-bottom: 28px;
+  }
+
+  .drives__list {
+    margin-bottom: 20px;
+  }
+
+  .drives .drives__element {
+    flex-direction: column;
+    margin-bottom: 0;
+  }
+
+  .drives__text {
+    width: 100%;
+  }
+
+  .drives__description {
+    text-align: left;
+  }
+
+  .drives__description--inner {
+    display: inline;
+  }
+
+  .drives__more--right {
+    margin-left: 0;
+  }
+
+  .drives__more {
+    width: 23%;
+  }
+
+  .drives__picture {
+    padding-top: 119px;
+    width: 100%;
+  }
+
+  .drives__picture:after {
+    left: 0;
+    top: 115px;
+    height: 100%;
+    transform: rotate(90deg);
+    width: 100%;
+    background-position: left;
+
+  }
+
+  .drives__button {
+    left: 0;
+    top: 60px;
+  }
+
+  .drives__image {
+    width: 79%;
+  }
+
+  .drives .drives__element--reverse {
+    flex-flow: column-reverse;
+  }
+
+  .drives__picture--inner {
+    &:after {
+      top: 65px;
+    }
+  }
+
+  .drives__info {
+    width: 72%;
+  }
+
+  .drives__picture--shadow:after {
+
+    top: 87px;
+  }
+
+  .drives__image--inner {
+    width: 72%;
+  }
+}
+@media screen and (max-width: 635px){
+  .hat__wrap {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 568px) {
+  .header .drives__form {
+    display: none;
+  }
+
+  .hat {
+    padding: 32px 0 36px;
+  }
+
+  .hat__image {
+    margin-bottom: 8px;
+  }
+
+  .hat__title {
+    font-size: 18px;
+    margin-bottom: 44px;
+  }
+
+  .hat .hat__wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hat__link {
+    font-size: 15px;
+    padding: 12px 21px;
+    width: 224px;
+  }
+.hat__link--download{
+  margin-bottom: 13px;
+}
+
+  .hat__link--look {
+    padding: 12px 35px;
+  }
+  .hat__icon {
+    height: 40px;
+  }
+  .drives {
+    padding: 15px 0 0;
+  }
+  .drives__title {
+    font-size: 19px;
+
+  }
+  .drives__info {
+    width: 100%;
+  }
+  .drives__more {
+    width: 45%;
+  }
+  .drives__image {
+    width: 96%;
+    &--inner{
+      width: 78%;
+    }
+  }
+  .drives__picture:after {
+    top: 40px;
+    height: 85%;
+  }
+}
