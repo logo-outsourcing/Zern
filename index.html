@@ -7,6 +7,7 @@
     <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.css">
     <link rel="stylesheet" href="style/css/reset.css">
     <link rel="stylesheet" href="style/css/style.css">
     <link rel="icon" href="img/home/favicon.png">
@@ -77,9 +78,10 @@
                                 </ul>
                             </li>
                             <li class="header__element">
-                                <a href="drives.html" class="header__link header__dropdown--link"><img src="img/home/drives.svg"
-                                                                                             alt="Приводы"
-                                                                                             class="header__icon ">Приводы</a>
+                                <a href="drives.html" class="header__link header__dropdown--link"><img
+                                        src="img/home/drives.svg"
+                                        alt="Приводы"
+                                        class="header__icon ">Приводы</a>
                             </li>
                         </ul>
                     </li>
@@ -89,14 +91,14 @@
                     </li>
                     <li class="header__item">
                         <a href="contact.html" class="header__link"><img src="img/home/phone.svg" alt="Контакты"
-                                                              class="header__icon ">Контакты</a>
+                                                                         class="header__icon ">Контакты</a>
                     </li>
                     <li class="header__item">
                         <a href="about.html" class="header__link"><img src="img/home/company.svg" alt="О компании"
-                                                              class="header__icon ">О компании</a>
+                                                                       class="header__icon ">О компании</a>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link btn open-modal" data-modal="#modal1"><img
+                        <a href="#modal" class="header__link header__modal--open"><img
                                 src="img/home/telegram.svg" alt="Связаться с нами"
                                 class="header__icon ">Связаться с нами</a>
                     </li>
@@ -106,35 +108,49 @@
                     <button class="header__button"><img src="img/home/magnifier.svg" alt="magnifier"></button>
                     <ul class="header__search">
                         <li class="header__search--item">
-                            <a href="#" class="header__search--element header__link header__dropdown--link header__point--link">Пластинчатые
-                                <span class="header__link--color header__search--result"> рекуператоры</span> противоточного типа</a>
-                        </li>
-                        <li class="header__search--item">
-                            <a href="#" class="header__search--element header__link header__dropdown--link header__point--link">Энтальпийные <span
-                                    class="header__link--color header__search--result"> рекуператоры</span>
+                            <a href="#"
+                               class="header__search--element header__link header__dropdown--link header__point--link">Пластинчатые
+                                <span class="header__link--color header__search--result"> рекуператоры</span>
                                 противоточного типа</a>
                         </li>
                         <li class="header__search--item">
-                            <a href="#" class="header__search--element header__link header__dropdown--link header__point--link">Пластинчатые <span
-                                    class="header__link--color header__search--result"> рекуператоры</span>
+                            <a href="#"
+                               class="header__search--element header__link header__dropdown--link header__point--link">Энтальпийные
+                                <span
+                                        class="header__link--color header__search--result"> рекуператоры</span>
+                                противоточного типа</a>
+                        </li>
+                        <li class="header__search--item">
+                            <a href="#"
+                               class="header__search--element header__link header__dropdown--link header__point--link">Пластинчатые
+                                <span
+                                        class="header__link--color header__search--result"> рекуператоры</span>
                                 пререкрёстного типа</a>
                         </li>
                         <li class="header__search--item">
-                            <a href="#" class="header__search--element header__link header__dropdown--link header__point--link">Энтальпийные <span
-                                    class="header__link--color header__search--result"> рекуператоры</span>
+                            <a href="#"
+                               class="header__search--element header__link header__dropdown--link header__point--link">Энтальпийные
+                                <span
+                                        class="header__link--color header__search--result"> рекуператоры</span>
                                 перекрёстного типа</a>
                         </li>
                         <li class="header__search--item">
-                            <a href="#" class="header__search--element header__link header__dropdown--link header__point--link">Пластинчатые <span
-                                    class="header__link--color header__search--result"> рекуператоры</span>
+                            <a href="#"
+                               class="header__search--element header__link header__dropdown--link header__point--link">Пластинчатые
+                                <span
+                                        class="header__link--color header__search--result"> рекуператоры</span>
                                 противоточного типа</a>
                         </li>
                         <li class="header__search--item">
-                            <a href="#" class="header__search--element header__link header__dropdown--link header__point--link">Роторные <span
-                                    class="header__link--color header__search--result"> рекуператоры</span></a>
+                            <a href="#"
+                               class="header__search--element header__link header__dropdown--link header__point--link">Роторные
+                                <span
+                                        class="header__link--color header__search--result"> рекуператоры</span></a>
                         </li>
                         <li class="header__search--item">
-                            <a href="search-results.html" class="header__search--more header__search--element header__link  header__link--color content-row header__search--link">Все результаты
+                            <a href="search-results.html"
+                               class="header__search--more header__search--element header__link  header__link--color content-row header__search--link">Все
+                                результаты
                                 <img src="img/home/arrow_menu.svg" alt="arrow"
                                      class="header__search--arrow header__arrow header__arrow--dropdown"></a>
                         </li>
@@ -159,89 +175,90 @@
             </div>
             <button class="header__menu--open"></button>
         </div>
-        <div class="header__modal" id="modal1">
+        <div class="header__modal" id="modal">
             <div class="header__modal--content">
                 <div class="header__modal--heading">
                     <h2 class="header__modal--title">Свяжитесь с нами</h2>
                     <p class="header__modal--text">Для получения оптимального уровня обслуживания<br>
                         пожалуйста заполните форму и укажите причину обращения.</p>
                 </div>
-                <div>
-                    <form class="header__modal--form">
-                        <div class="header__inner">
-                            <div class="content-row reach__box">
-                                <div class="reach__element ">
-                                    <input class="header__modal--input reach__input reach__input--name" type="text"
-                                           placeholder="Фамилия, Имя">
-                                    <input class="header__modal--input reach__input reach__input--country" type="text"
-                                           placeholder="Страна">
-                                    <select class="header__modal--input reach__input reach__input--question reach__select"
-                                            name="select">
-                                        <option value="value1" selected>Причина обращения</option>
-                                        <option value="value2">Причина 1</option>
-                                        <option value="value3">Причина 2</option>
-                                        <option value="value4">Причина 3</option>
-                                    </select>
-                                </div>
-                                <div class="reach__element">
-                                    <input class="header__modal--input reach__input reach__input--company" type="text"
-                                           placeholder="Компания">
-                                    <input class="header__modal--input reach__input reach__input--city" type="text"
-                                           placeholder="Город">
-                                    <input class="header__modal--input reach__input reach__input--email" type="email"
-                                           placeholder="E-mail">
-                                </div>
+                <form class="header__modal--form">
+                    <div class="header__inner">
+                        <div class="content-row reach__box">
+                            <div class="reach__element ">
+                                <input class="header__modal--input reach__input reach__input--name" type="text"
+                                       placeholder="Фамилия, Имя">
+                                <input class="header__modal--input reach__input reach__input--country" type="text"
+                                       placeholder="Страна">
+                                <select class="header__modal--input reach__input reach__input--question reach__select"
+                                        name="select">
+                                    <option value="value1" selected>Причина обращения</option>
+                                    <option value="value2">Причина 1</option>
+                                    <option value="value3">Причина 2</option>
+                                    <option value="value4">Причина 3</option>
+                                </select>
                             </div>
-                            <textarea class="header__modal--textarea header__modal--input reach__input reach__textarea"
-                                      placeholder="Текст Вашего сообщения..."
-                                      rows="5"
-                                      cols="50"></textarea>
+                            <div class="reach__element">
+                                <input class="header__modal--input reach__input reach__input--company" type="text"
+                                       placeholder="Компания">
+                                <input class="header__modal--input reach__input reach__input--city" type="text"
+                                       placeholder="Город">
+                                <input class="header__modal--input reach__input reach__input--email" type="email"
+                                       placeholder="E-mail">
+                            </div>
                         </div>
-                        <div class="header__send content-row">
-                            <div class="reach__captcha header__captcha container">
-                                <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
-                                <div class="text-danger" id="recaptchaError"></div>
-                            </div>
-                            <div class="header__conditions">
-                                <button class="header__modal--button content-button content-row reach__button">Отправить <img
-                                        src="img/home/email.png"
+                        <textarea class="header__modal--textarea header__modal--input reach__input reach__textarea"
+                                  placeholder="Текст Вашего сообщения..."
+                                  rows="5"
+                                  cols="50"></textarea>
+                    </div>
+                    <div class="header__send content-row">
+                        <div class="reach__captcha header__captcha container">
+                            <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
+                            <div class="text-danger" id="recaptchaError"></div>
+                        </div>
+                        <div class="header__conditions">
+                            <button class="header__modal--button content-button content-row reach__button">Отправить
+                                <img
+                                        src="img/home/letter.png"
                                         alt="email"
                                         class="reach__button--icon">
-                                </button>
-                                <div class="content-row">
-                                    <input type="checkbox" class="reach__checkbox">
-                                    <label class="header__label reach__label">Я согласен с условиями использования сайта
-                                        и политикой конфиденциальности</label>
-                                </div>
+                            </button>
+                            <div class="content-row">
+                                <input type="checkbox" class="reach__checkbox">
+                                <label class="header__label reach__label">Я согласен с условиями использования сайта
+                                    и политикой конфиденциальности</label>
                             </div>
                         </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
                 <div class="header__modal--footer content-row">
                     <div class="header__box">
                         <h2 class="header__subtitle reach__title">Отдел продаж</h2>
-                        <p class="header__modal--text reach__text ">По вопросам поставки продукции
+                        <p class="header__modal--text header__modal--info reach__text ">По вопросам поставки продукции
                             по территории Украины </p>
-                        <p class="header__adreess  reach__link content-row reach__link--inner"><img src="img/home/location.png" alt=""
-                                                                                   class="reach__icon--inner">Украина,
+                        <p class="header__adreess  reach__link content-row reach__link--inner"><img
+                                src="img/home/location.png" alt=""
+                                class="header__image--inner">Украина,
                             01030, г.
                             Киев,<br>
                             ул. М. Коцюбинского, 1</p>
                     </div>
                     <div class="header__info reach__info">
                         <a href="#" class="header__modal--link reach__link reach__link--inner content-row">
-                            <img src="img/home/call.png" alt="" class="reach__icon">
+                            <img src="img/home/call.png" alt="" class="header__image">
                             <span>(044) 406-36-27
                     <span class="reach__text">многоканальный</span></span>
                         </a>
-                        <a href="#" class="header__modal--link reach__link content-row"> <img src="img/home/call.png" alt=""
-                                                                          class="reach__icon">(044)
+                        <a href="#" class="header__modal--link reach__link content-row"> <img src="img/home/call.png"
+                                                                                              alt=""
+                                                                                              class="header__image">(044)
                             406-07-50</a>
-                        <a href="#" class="header__modal--link reach__link content-row"> <img src="img/home/email.png" alt=""
-                                                                          class="reach__icon--inner">sale@vents.ua</a>
+                        <a href="#" class="header__modal--link reach__link content-row"> <img src="img/home/email.png"
+                                                                                              alt=""
+                                                                                              class="header__image--inner">sale@vents.ua</a>
                     </div>
                 </div>
-                <a class='close-modal' data-modal="#modal1" href="#">x</a>
             </div>
         </div>
     </div>
@@ -348,7 +365,7 @@
                         <span class="example__title--text">рекуператоры</span></h2>
                     <img src="img/home/recuperator-element.png" alt="рекуператоры" class="content-image example__image">
                 </div>
-                <div class="example__wrap">
+                <div class="example__wrap example__wrap--inner">
                     <h2 class="example__title content-row example__title--inner">
                         <img src="img/home/example-icon2.svg" alt="иконка привода" class="example__icon">
                         <span class=" example__title--text">приводы</span></h2>
@@ -409,7 +426,7 @@
                         <div class="g-recaptcha" data-sitekey="6KepjAsTFFFFFFMqccY0ZiGqc3TEd3YVxo8cHsGX"></div>
                         <div class="text-danger" id="recaptchaError2"></div>
                     </div>
-                    <button class="content-button content-row reach__button">Отправить <img src="img/home/email.png"
+                    <button class="content-button content-row reach__button">Отправить <img src="img/home/letter.png"
                                                                                             alt="email"
                                                                                             class="reach__button--icon">
                     </button>
@@ -479,7 +496,7 @@
                 <a href="about.html" class="footer__link">О компании</a>
             </li>
             <li class="footer__item footer__item--average">
-                <a href="#" class="footer__link btn open-modal" data-modal="#modal1">Связаться с нами</a>
+                <a href="#modal" class="footer__link header__modal--open" >Связаться с нами</a>
             </li>
             <li class="footer__item">
                 <a href="#" class="footer__link">Карта сайта</a>
@@ -508,7 +525,8 @@
 </footer>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
 <script src="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
-<script  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7zuZSVjDDwKXDC84_w-s9ocuVV6ydUqg"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/3.5.7/jquery.fancybox.min.js"></script>
+<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD7zuZSVjDDwKXDC84_w-s9ocuVV6ydUqg"></script>
 <script src='https://www.google.com/recaptcha/api.js'></script>
 <script src="js/main.js"></script>
 </body>

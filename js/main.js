@@ -2,6 +2,10 @@ $('.header__menu--open').click(function (e) {
     e.preventDefault();
     $('.header__navigation').toggleClass('header__navigation--open');
     $('.header__menu--open').toggleClass('header__menu--close');
+    $('.header__language').toggleClass('header__language--hidden');
+});
+$(".header__modal--open").fancybox({
+    'hideOnContentClick': true
 });
 $('.banner__slider').slick({
     dots: true,
@@ -13,60 +17,13 @@ $('.banner__slider').slick({
     prevArrow: ".banner__prev",
     nextArrow: ".banner__next",
 });
-$(window).ready(function(){
-    $(".header__modal").each( function(){
-        $(this).wrap('<div class="header__overlay"></div>')
-    });
-
-    $(".open-modal").on('click', function(e){
-        e.preventDefault();
-        e.stopImmediatePropagation;
-
-        var $this = $(this),
-            modal = $($this).data("modal");
-
-        $(modal).parents(".header__overlay").addClass("header__modal--open");
-        setTimeout( function(){
-            $(modal).addClass("header__modal--open");
-        }, 350);
-
-        $(document).on('click', function(e){
-            var target = $(e.target);
-
-            if ($(target).hasClass("header__overlay")){
-                $(target).find(".header__modal").each( function(){
-                    $(this).removeClass("header__modal--open");
-                });
-                setTimeout( function(){
-                    $(target).removeClass("header__modal--open");
-                }, 350);
-            }
-
-        });
-
-    });
-
-    $(".close-modal").on('click', function(e){
-        e.preventDefault();
-        e.stopImmediatePropagation;
-
-        var $this = $(this),
-            modal = $($this).data("modal");
-
-        $(modal).removeClass("header__modal--open");
-        setTimeout( function(){
-            $(modal).parents(".header__overlay").removeClass("header__modal--open");
-        }, 350);
-
-    });
-});
 'use strick';
 
 (function ($) {
     $(document).ready(function () {
         var uluru = {lat: 49.5687689, lng: 34.5858791};
-        if($("div").is(".reach__map")){
-            map = new google.maps.Map(document.getElementById ('map'), {
+        if ($("div").is(".reach__map")) {
+            map = new google.maps.Map(document.getElementById('map'), {
                 center: uluru,
                 zoom: 3,
             });
@@ -74,13 +31,11 @@ $(window).ready(function(){
             var pos2 = new google.maps.LatLng(-4.0101626, 17.2339139);
             var pos3 = new google.maps.LatLng(4.6420843, -78.8351989);
             var pos4 = new google.maps.LatLng(15.7583519, 101.4151049);
-            var marker = new google.maps.Marker({
+            var marker1 = new google.maps.Marker({
                 position: pos1,
                 map: map,
-                title: '',
-                icon: "img/home/marker.svg"
-
-
+                icon: "img/home/marker.svg",
+                title: 'Кленовая Улица д.2'
             });
             var marker = new google.maps.Marker({
                 position: pos2,
@@ -88,13 +43,27 @@ $(window).ready(function(){
                 icon: "img/home/marker.svg",
                 title: 'Кленовая Улица д.2'
             });
-            var marker = new google.maps.Marker({
+
+            var popupContent = '<div class="reach__window">' +
+                '<h4 class="reach__window--title">Адрес производства</h4>' +
+                '<p class="reach__window--text">Адрес: Украина, Киев, Ул. Соборности 36</p>' +
+                '<a href="#" class="reach__window--link">E-mail: sale@vents.ua</a>' +
+                '<a href="#" class="reach__window--link">Телефон: (044) 406-36-27 (044) 406-07-50</a>' +
+                '</div>';
+            var infowindow = new google.maps.InfoWindow({
+                content: popupContent
+            });
+            marker.addListener('click', function () {
+                infowindow.open(map, marker);
+            });
+
+            var marker3 = new google.maps.Marker({
                 position: pos3,
                 map: map,
                 icon: "img/home/marker.svg",
                 title: 'Кленовая Улица д.2'
             });
-            var marker = new google.maps.Marker({
+            var marker4 = new google.maps.Marker({
                 position: pos4,
                 map: map,
                 icon: "img/home/marker.svg",
@@ -108,8 +77,8 @@ $(window).ready(function(){
 })(jQuery);
 (function ($) {
     $(document).ready(function () {
-        if($("div").is(".manufacturing__map")){
-            map2 = new google.maps.Map(document.getElementById ('map2'), {
+        if ($("div").is(".manufacturing__map")) {
+            map2 = new google.maps.Map(document.getElementById('map2'), {
                 center: {lat: 55.6796158, lng: 29.9771609},
                 zoom: 3,
             });
@@ -123,23 +92,36 @@ $(window).ready(function(){
                 title: '',
                 icon: "img/home/marker.svg"
             });
-            var marker = new google.maps.Marker({
+            var marker2 = new google.maps.Marker({
                 position: pos2,
                 map: map2,
                 icon: "img/home/marker.svg",
                 title: 'Кленовая Улица д.2'
             });
-            var marker = new google.maps.Marker({
+            var marker3 = new google.maps.Marker({
                 position: pos3,
                 map: map2,
                 icon: "img/home/marker.svg",
-                title: 'Кленовая Улица д.3'
+                title: 'Кленовая Улица д.2'
             });
-            var marker = new google.maps.Marker({
+            var marker4 = new google.maps.Marker({
                 position: pos4,
                 map: map2,
                 icon: "img/home/marker.svg",
-                title: 'Кленовая Улица д.4'
+                title: 'Кленовая Улица д.2'
+            });
+
+            var popupContent = '<div class="reach__window">' +
+                '<h4 class="reach__window--title">Адрес производства</h4>' +
+                '<p class="reach__window--text">Адрес: Украина, Киев, Ул. Соборности 36</p>' +
+                '<a href="#" class="reach__window--link">E-mail: sale@vents.ua</a>' +
+                '<a href="#" class="reach__window--link">Телефон: (044) 406-36-27 (044) 406-07-50</a>' +
+                '</div>';
+            var infowindow = new google.maps.InfoWindow({
+                content: popupContent
+            });
+            marker.addListener('click', function () {
+                infowindow.open(map2, marker);
             });
         } else {
             return;
@@ -188,8 +170,7 @@ $(window).ready(function(){
 // });
 
 
-
-// 1. Получить ответ гугл капчи
+// //1. Получить ответ гугл капчи
 // var captcha = grecaptcha.getResponse();
 //
 // // 2. Если ответ пустой, то выводим сообщение о том, что пользователь не прошёл тест.
@@ -220,18 +201,18 @@ $(window).ready(function(){
 function changeCapthaSize() {
     var reCaptchaWidth = 302;
     var containerWidth = $('.reach__captcha').width();
-    if(reCaptchaWidth > containerWidth) {
+    if (reCaptchaWidth > containerWidth) {
         var reCaptchaScale = containerWidth / reCaptchaWidth;
         $('.g-recaptcha').css({
-'transform':'scale(' +reCaptchaScale+ ')',
-    'transform-origin':'left top'
-    });
+            'transform': 'scale(' + reCaptchaScale + ')',
+            'transform-origin': 'left top'
+        });
     }
 };
 
-$(window).ready(function(){
+$(window).ready(function () {
     changeCapthaSize();
 });
-$(window).resize(function(){
+$(window).resize(function () {
     changeCapthaSize();
 });

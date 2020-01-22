@@ -68,7 +68,7 @@
   position: relative;
   &:after {
     content: "";
-    background: url("../../img/home/background.png") no-repeat;
+    background: url("../../img/home/content-backgraund.png") no-repeat;
     background-size: cover;
     width: 100%;
     z-index: -2;
@@ -76,6 +76,7 @@
     top: -18px;
     left: 0;
     bottom: 0;
+    background-position: bottom;
   }
 }
 
@@ -432,6 +433,8 @@
 
   .header__form {
     width: 42%;
+    padding: 0 8px;
+    box-sizing: border-box;
   }
 
   .header__logo {
@@ -441,7 +444,9 @@
   .header {
     padding: 19px 0 0;
   }
-
+  .header__input {
+    padding: 8px 4px;
+  }
   .header__link {
     display: flex;
     flex-flow: wrap;
@@ -794,11 +799,11 @@
   }
 
   .header__form {
-    width: 70%;
+    width: 75%;
   }
 
   .header__menu {
-    width: 50%;
+    width: 47%;
   }
 
   .header__navigation {
@@ -930,15 +935,12 @@
 
   .header__modal {
     width: 95%;
+    padding-top: 63px;
   }
 
-  .header__overlay {
-    padding: 0;
-  }
-
-  .close-modal {
+  .header__modal .fancybox-close-small {
     right: 0;
-    top: -38px;
+    top: 20px;
   }
 
   .header__modal .header__modal--footer .header__adreess {
@@ -950,7 +952,7 @@
   }
 
   .header__modal--heading {
-    padding: 26px 13% 10px;
+    padding: 26px 12% 20px;
   }
 
   .header__modal .header__modal--input {
@@ -1065,6 +1067,8 @@
 
   .reach__input {
     width: 100%;
+    padding: 8px;
+    margin-bottom: 17px;
   }
 
   .reach__info {
@@ -1074,43 +1078,70 @@
   .reach__link {
     width: 100%;
     justify-content: center;
+    margin-bottom: 20px;
+    &--inner{
+      font-size: 14px;
+      margin-bottom: 35px;
+    }
   }
-
+  .reach__link:not(:first-child) {
+    margin-bottom: 22px;
+  }
   .reach__text--inner {
     width: 95%;
+    margin: 0 auto 17px;
   }
 
   .reach__textarea {
-    height: 100px;
+    height: 92px;
   }
-
+  .reach__captcha {
+    margin-bottom: 4px;
+  }
+  .reach__wrap {
+    padding: 24px 4%;
+  }
+  .reach__button{
+    margin-bottom: 16px;
+  }
+  .reach__map {
+    height: 388px;
+  }
   .header__form {
     position: absolute;
     top: 85px;
     left: 1%;
     width: 97%;
     z-index: 9;
+    padding: 0 5px;
   }
 
   .content-wrap {
-    padding-top: 68px;
+    padding-top: 66px;
   }
 
   .header__logo {
     width: 46%;
+    margin-bottom: 13px;
   }
-
+  .header__language {
+    margin-bottom: 13px;
+  }
   .header__menu--open {
     padding: 0;
     margin-left: 13px;
+    margin-bottom: 13px;
   }
-
+  .header__input {
+    padding: 7px 15px;
+  }
   .header__menu {
     width: 0;
   }
 
   .header__menu--open {
     margin-left: 0;
+    margin-right: 7px;
   }
 
   .header__item {
@@ -1125,7 +1156,30 @@
     width: 100%;
     box-sizing: border-box;
   }
-
+  .example__wrap {
+    padding: 43px 23px 8px;
+    &--inner{
+      padding: 43px 25px 70px;
+    }
+  }
+  .example__title {
+    margin-bottom: 27px;
+    &--inner{
+      margin-bottom: 71px;
+    }
+  }
+  .example {
+    padding-bottom: 0;
+  }
+  .example__icon {
+    margin-right: 18px;
+  }
+  .example__image {
+    width: 100%;
+  }
+  .example__wrap {
+    margin-bottom: 17px;
+  }
   .header__dropdown--item:hover .header__additionalMenu {
     width: 100%;
     position: static;
@@ -1148,6 +1202,7 @@
 
   .header__navigation {
     padding: 0;
+    top: 68px;
   }
 
   .header__point {
@@ -1193,12 +1248,10 @@
     text-align: center;
   }
 
-  .header__overlay {
-    padding: 67px 0 0 1%;
-  }
 
   .header__modal--heading {
-    padding: 22px 7% 1px;
+    padding: 22px 7% 31px;
+    margin-bottom: 9px;
   }
 
   .header__inner {
@@ -1249,7 +1302,7 @@
   }
 
   .header__form:hover .header__search {
-    top: 35px;
+    top: 32px;
     width: 100%;
   }
 
@@ -1258,4 +1311,5 @@
     padding: 0;
     justify-content: flex-start;
   }
+
 }

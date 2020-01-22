@@ -59,8 +59,7 @@
     border-radius: 18.0px;
     width: 27%;
     align-items: center;
-    justify-content: space-around;
-    padding: 4px 0;
+    justify-content: space-between;
     position: relative;
     margin-bottom: 17px;
     &:hover {
@@ -75,6 +74,9 @@
     line-height: 14px;
     font-weight: 400;
     color: #dbb61c;
+    padding: 8px 20px;
+    width: 88%;
+    box-sizing: border-box;
     &:hover,
     &:active,
     &:focus {
@@ -84,6 +86,7 @@
   &__button {
     background: transparent;
     border: none;
+    cursor: pointer;
     &:hover,
     &:active,
     &:focus {
@@ -117,6 +120,9 @@
   &__language {
     position: relative;
     margin-bottom: 17px;
+    &--hidden {
+      visibility: hidden;
+    }
   }
   &__dropdown {
     display: none;
@@ -156,52 +162,24 @@
       justify-content: space-between;
     }
   }
-  &__overlay {
-    width: 100%;
-    display: flex;
-    z-index: 999;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    background: rgba(black, 0.75);
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.35s ease-in-out;
-    overflow-y: auto;
-    min-height: 100vh;
-  }
-
   &__modal {
-    opacity: 0;
-    pointer-events: none;
-    transition: 0.35s ease-in-out;
-    width: 650px;
+    width: 645px;
+    display: none;
+    background: transparent;
+    padding: 0;
     &--content {
       background: white;
-      transform: translate(0, -10px);
-      opacity: 0;
-      transition: .35s ease-in-out;
       width: 620px;
 
-    }
-    &--open {
-      opacity: 1;
-      pointer-events: inherit;
-      .header__modal--content {
-        transform: translate(0, -0px);
-        opacity: 1;
-      }
     }
     &--heading {
       width: 100%;
       background-size: cover;
-      padding: 26px 13%;
+      padding: 26px 13% 20px;
       box-sizing: border-box;
-      background: url("../../img/home/modal_background.png") no-repeat;
+      margin-bottom: 37px;
+      background: url("../../img/home/modal--background.png") no-repeat;
+      background-position: bottom;
     }
     &--title {
       font-family: 'Century Gothic Bold', sans-serif;
@@ -222,13 +200,13 @@
     }
     &--form {
       position: relative;
-      padding: 26px 26px 14px;
+      padding: 0 26px 14px;
     }
 
   }
   &__inner {
     width: 82%;
-    margin: 0 auto 16px;
+    margin: 0 auto;
   }
   &__send {
     width: 81%;
@@ -255,16 +233,24 @@
   &__info {
     width: 44%;
   }
-
+  &__image {
+    margin-right: 8px;
+    &--inner {
+      margin-right: 14px;
+    }
+  }
 }
 
 .header__modal .header__modal--input {
   border: 1.0px solid #c5c5c5;
   background-color: #eeeeee;
+  padding: 10px 8px;
+  margin-bottom: 18px;
 }
 
 .header__modal .header__modal--textarea {
-  height: 75px;
+  height: 72px;
+  margin-bottom: 11px;
 }
 
 .header__modal .header__captcha {
@@ -275,6 +261,8 @@
 .header__modal .header__modal--button {
   width: 100%;
   margin-bottom: 5px;
+  border-width: 1px;
+  text-transform: capitalize;
 }
 
 .header__modal .header__label {
@@ -289,6 +277,8 @@
 .header__modal .header__modal--text {
   font-family: 'Myriad Pro Regular', sans-serif;
   font-size: 14px;
+}
+.header__modal .header__modal--info {
   margin-bottom: 25px;
 }
 
@@ -305,19 +295,16 @@
 }
 
 .header__modal .header__modal--link:not(:last-child) {
-  margin-bottom: 10px;
+  margin-bottom: 17px;
 }
 
-.close-modal {
-  position: absolute;
-  right: -25px;
-  top: 0;
+.header__modal .fancybox-close-small {
   color: #eebe00;
-  z-index: 999;
-  font-size: 21px;
-  text-transform: uppercase;
-  text-decoration: none;
-  font-family: "Century Gothic Bold", sans-serif;
+  top: -6px;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  padding: 0;
 }
 
 .header__catalog:hover .header__dropdown {
@@ -636,16 +623,16 @@
   &__map {
     width: 100%;
     height: 798px;
-    &:after {
-      //content: "";
-      //background: url("../../img/home/map-mask.png") no-repeat;
-      //position: absolute;
-      //top: 0;
-      //left: 0;
-      //width: 100%;
-      //height: 235px;
-      //background-position: bottom;
-    }
+    //&:after {
+    //    //  content: "";
+    //    //  position: absolute;
+    //    //  top: 0;
+    //    //  width: 100%;
+    //    //  height: 278px;
+    //    //  background: url(../../img/home/map-bacground.png) no-repeat;
+    //    //  transform: rotate(180deg);
+    //    //  z-index: 1;
+    //    //}
   }
   &__wrap {
     background: url("../../img/home/reach-background.png") no-repeat;
@@ -672,6 +659,7 @@
     font-weight: 700;
     color: #292929;
     margin-bottom: 18px;
+    text-transform: uppercase;
   }
   &__link {
     font-family: 'Century Gothic Regular', sans-serif;
@@ -680,6 +668,8 @@
     color: #292929;
     text-decoration: none;
     align-items: center;
+    margin-bottom: 25px;
+
     &--inner {
       align-items: flex-start;
     }
@@ -796,11 +786,12 @@
 
   }
   &__button {
-    text-transform: capitalize;
     margin-bottom: 18px;
     padding: 7px 15px;
     justify-content: space-around;
     width: 72%;
+    border-width: 1px;
+    text-transform: capitalize;
     &--icon {
       background: #ffffff;
       width: 31px;
@@ -826,6 +817,39 @@
       margin-right: 7px;
     }
   }
+  &__window{
+    background-color: #454b4f;
+    &--title{
+      font-family: "Roboto",sans-serif;
+      font-size: 14px;
+      line-height: 12px;
+      font-weight: 700;
+      color: #feeaf1;    margin-bottom: 10px;
+    }
+    &--text{
+      font-family: "Roboto",sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: 100;
+      color: #feeaf1;
+      margin-bottom: 12px;
+    }
+    &--link{
+      font-family: "Roboto",sans-serif;
+      font-size: 12px;
+      line-height: 12px;
+      font-weight: 100;
+      color: #feeaf1;
+      text-decoration: none;
+      display: block;
+      margin-bottom: 10px;
+    }
+  }
+}
+
+.reach .reach__button {
+  border-width: 1px;
+  text-transform: capitalize;
 }
 
 .reach__input::-webkit-input-placeholder {
@@ -855,7 +879,21 @@
   font-weight: 300;
   color: #535353;
 }
-
+.reach__map .gm-style .gm-style-iw{
+  background-color: #454b4f;
+  border-radius: 0;
+  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+  width: 302px;
+  height: 141px;
+  padding: 19px;
+}
+.gm-style .gm-style-iw-t::after{
+  background: #454b4f;
+  box-shadow: none;
+}
+.reach__map .gm-style-iw-d{
+  overflow: hidden!important;
+}
 .footer {
   &__navigation {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
