@@ -60,7 +60,7 @@
 .drives {
   padding: 40px 0;
   position: relative;
-  &:after{
+  &:after {
     content: "";
     position: absolute;
     bottom: -250px;
@@ -130,18 +130,7 @@
   &__text {
     width: 50%;
     box-sizing: border-box;
-    &--left {
-      padding-right: 8%;
-    }
-    &--right {
-      padding-left: 7%;
-    }
-  }
-  &__picture {
     position: relative;
-    width: 50%;
-    padding-top: 63px;
-    box-sizing: border-box;
     &:after {
       content: '';
       position: absolute;
@@ -150,13 +139,27 @@
       width: 38px;
       background: url("../../img/drives/shadow.png") no-repeat;
     }
+    &--left {
+      padding-right: 8%;
+    }
+    &--right {
+      padding-left: 7%;
+    }
     &--left:after {
-      left: 0;
+      right: -38px;
+
     }
     &--right:after {
-      right: 0;
+      left: -38px;
       transform: rotate(180deg);
     }
+  }
+  &__picture {
+    position: relative;
+    width: 50%;
+    padding-top: 63px;
+    box-sizing: border-box;
+
     &--inner {
       padding-top: 0;
     }
@@ -296,10 +299,12 @@
     }
   }
 }
-@media screen and (max-width: 990px){
+
+@media screen and (max-width: 990px) {
   .hat__wrap {
     width: 60%;
   }
+
   .drives__more {
     width: 35%;
   }
@@ -357,16 +362,19 @@
     width: 100%;
   }
 
-  .drives__picture:after {
+  .drives__text:after {
     left: 0;
-    top: 115px;
-    height: 100%;
-    transform: rotate(90deg);
+    bottom: -69px;
+    background: url(../../img/drives/shadow_mob.png) no-repeat;
     width: 100%;
-    background-position: left;
-
+    height: 38px;
+    right: auto;
+    top: auto;
+    background-position: center;
   }
-
+  .drives__text--right:after {
+    transform: rotate(0);
+  }
   .drives__button {
     left: 0;
     top: 60px;
@@ -390,20 +398,17 @@
     width: 72%;
   }
 
-  .drives__picture--shadow:after {
-
-    top: 87px;
-  }
-
   .drives__image--inner {
     width: 72%;
   }
 }
-@media screen and (max-width: 635px){
+
+@media screen and (max-width: 635px) {
   .hat__wrap {
     width: 80%;
   }
 }
+
 @media screen and (max-width: 568px) {
   .header .drives__form {
     display: none;
@@ -432,37 +437,41 @@
     padding: 12px 21px;
     width: 224px;
   }
-.hat__link--download{
-  margin-bottom: 13px;
-}
+
+  .hat__link--download {
+    margin-bottom: 13px;
+  }
 
   .hat__link--look {
     padding: 12px 35px;
   }
+
   .hat__icon {
     height: 40px;
   }
+
   .drives {
     padding: 15px 0 0;
   }
+
   .drives__title {
     font-size: 19px;
 
   }
+
   .drives__info {
     width: 100%;
   }
+
   .drives__more {
     width: 45%;
   }
+
   .drives__image {
     width: 96%;
-    &--inner{
+    &--inner {
       width: 78%;
     }
   }
-  .drives__picture:after {
-    top: 40px;
-    height: 85%;
-  }
+
 }
