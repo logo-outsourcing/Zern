@@ -30,11 +30,8 @@
     text-align: left;
     box-sizing: border-box;
     border: 1.0px solid rgba(255, 255, 255, 0.63);
-    background-size: cover;
     background: url("../../img/drives/link-background.png") no-repeat;
-    &--download {
 
-    }
     &--look {
       color: #c6c7c7;
       padding: 14px 35px;
@@ -182,6 +179,7 @@
     box-sizing: border-box;
     justify-content: flex-end;
     align-items: center;
+
     &--right {
       margin-left: auto;
     }
@@ -414,6 +412,12 @@
 
   .drives__image--inner {
     width: 72%;
+  }
+  .drives .drives__more--left {
+    flex-flow: wrap-reverse;
+  }
+  .drives__transform {
+    transform: rotate(0deg);
   }
 }
 
