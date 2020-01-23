@@ -278,6 +278,7 @@
   font-family: 'Myriad Pro Regular', sans-serif;
   font-size: 14px;
 }
+
 .header__modal .header__modal--info {
   margin-bottom: 25px;
 }
@@ -623,16 +624,17 @@
   &__map {
     width: 100%;
     height: 798px;
-    //&:after {
-    //    //  content: "";
-    //    //  position: absolute;
-    //    //  top: 0;
-    //    //  width: 100%;
-    //    //  height: 278px;
-    //    //  background: url(../../img/home/map-bacground.png) no-repeat;
-    //    //  transform: rotate(180deg);
-    //    //  z-index: 1;
-    //    //}
+    &:after {
+      content: "";
+      position: absolute;
+      top: 0;
+      width: 100%;
+      height: 290px;
+      background: url(../../img/home/MAP.png) no-repeat;
+      transform: rotate(180deg);
+      z-index: 1;
+      background-size: cover;
+    }
   }
   &__wrap {
     background: url("../../img/home/reach-background.png") no-repeat;
@@ -817,25 +819,26 @@
       margin-right: 7px;
     }
   }
-  &__window{
+  &__window {
     background-color: #454b4f;
-    &--title{
-      font-family: "Roboto",sans-serif;
+    &--title {
+      font-family: "Roboto", sans-serif;
       font-size: 14px;
       line-height: 12px;
       font-weight: 700;
-      color: #feeaf1;    margin-bottom: 10px;
+      color: #feeaf1;
+      margin-bottom: 10px;
     }
-    &--text{
-      font-family: "Roboto",sans-serif;
+    &--text {
+      font-family: "Roboto", sans-serif;
       font-size: 12px;
       line-height: 12px;
       font-weight: 100;
       color: #feeaf1;
       margin-bottom: 12px;
     }
-    &--link{
-      font-family: "Roboto",sans-serif;
+    &--link {
+      font-family: "Roboto", sans-serif;
       font-size: 12px;
       line-height: 12px;
       font-weight: 100;
@@ -879,21 +882,25 @@
   font-weight: 300;
   color: #535353;
 }
-.reach__map .gm-style .gm-style-iw{
+
+.reach__map .gm-style .gm-style-iw {
   background-color: #454b4f;
   border-radius: 0;
-  box-shadow: 0 1px 2px 0 rgba(0,0,0,0.15);
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
   width: 302px;
   height: 141px;
   padding: 19px;
 }
-.gm-style .gm-style-iw-t::after{
+
+.gm-style .gm-style-iw-t::after {
   background: #454b4f;
   box-shadow: none;
 }
-.reach__map .gm-style-iw-d{
-  overflow: hidden!important;
+
+.reach__map .gm-style-iw-d {
+  overflow: hidden !important;
 }
+
 .footer {
   &__navigation {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);

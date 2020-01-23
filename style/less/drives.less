@@ -60,16 +60,8 @@
 .drives {
   padding: 40px 0;
   position: relative;
-  &:after {
-    content: "";
-    position: absolute;
-    bottom: -250px;
-    width: 100%;
-    height: 278px;
-    background: url(../../img/drives/map-bacground.png) no-repeat;
-    transform: rotate(180deg);
-    z-index: -1;
-  }
+  background-size: auto;
+  background: url(../../img/drives/drives-background.png) no-repeat;
 
   &__title {
     font-family: "Century Gothic Bold", sans-serif;
@@ -215,6 +207,28 @@
     }
     &--fo {
       margin-bottom: 0;
+    }
+  }
+  &__modal{
+    display: none;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 85%;
+    height: 100%;
+    z-index: 9;
+    background-size: cover;
+    background: url("../../img/drives/drives_modal.png") no-repeat;
+    &--open{
+      display: block;
+    }
+    &--image{
+      position: absolute;
+      top: 15%;
+      left: 11%;
+      width: 75%;
+      height: 66%;
+      z-index: 99;
     }
   }
 }
