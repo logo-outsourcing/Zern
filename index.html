@@ -28,7 +28,7 @@
                                 src="img/home/arrow_menu.svg" alt="arrow" class=" header__arrow"></a>
                         <ul class="header__dropdown">
                             <li class="header__dropdown--item header__element">
-                                <a href="#" class="header__link header__link--color"><img
+                                <a href="#" class="header__link header__dropdown--link"><img
                                         src="img/home/recuperators.svg" alt="Рекуператоры"
                                         class="header__icon header__icon--mobile"><span class="header__link--mobile">Рекуператоры</span><img
                                         src="img/home/arrow_menu.svg" alt="arrow"
@@ -36,7 +36,7 @@
                                 <ul class="header__additionalMenu">
                                     <li class="header__point">
                                         <a href="#"
-                                           class="header__link header__point--link header__link--color content-row"><img
+                                           class="header__link header__point--link  content-row"><img
                                                 src="img/home/recuperators-1.svg" alt="Рекуператоры"
                                                 class="header__additionalMenu--icon">Пластинчатые рекуператоры
                                             противоточного типа</a>
@@ -86,19 +86,19 @@
                         </ul>
                     </li>
                     <li class="header__item">
-                        <a href="#" class="header__link"><img src="img/home/calculator.svg" alt="ZERN selector"
+                        <a href="#" class="header__link header__link--color"><img src="img/home/calculator.svg" alt="ZERN selector"
                                                               class="header__icon ">ZERN selector</a>
                     </li>
                     <li class="header__item">
-                        <a href="contact.html" class="header__link"><img src="img/home/phone.svg" alt="Контакты"
+                        <a href="contact.html" class="header__link header__link--color"><img src="img/home/phone.svg" alt="Контакты"
                                                                          class="header__icon ">Контакты</a>
                     </li>
                     <li class="header__item">
-                        <a href="about.html" class="header__link"><img src="img/home/company.svg" alt="О компании"
+                        <a href="about.html" class="header__link header__link--color"><img src="img/home/company.svg" alt="О компании"
                                                                        class="header__icon ">О компании</a>
                     </li>
                     <li class="header__item">
-                        <a href="#modal" class="header__link header__modal--open"><img
+                        <a href="#modal" class="header__link header__modal--open header__link--color"><img
                                 src="img/home/telegram.svg" alt="Связаться с нами"
                                 class="header__icon ">Связаться с нами</a>
                     </li>
@@ -110,46 +110,46 @@
                         <li class="header__search--item">
                             <a href="#"
                                class="header__search--element header__link header__dropdown--link header__point--link">Пластинчатые
-                                <span class="header__link--color header__search--result"> рекуператоры</span>
+                                <span class=" header__search--result"> рекуператоры</span>
                                 противоточного типа</a>
                         </li>
                         <li class="header__search--item">
                             <a href="#"
                                class="header__search--element header__link header__dropdown--link header__point--link">Энтальпийные
                                 <span
-                                        class="header__link--color header__search--result"> рекуператоры</span>
+                                        class=" header__search--result"> рекуператоры</span>
                                 противоточного типа</a>
                         </li>
                         <li class="header__search--item">
                             <a href="#"
                                class="header__search--element header__link header__dropdown--link header__point--link">Пластинчатые
                                 <span
-                                        class="header__link--color header__search--result"> рекуператоры</span>
+                                        class=" header__search--result"> рекуператоры</span>
                                 пререкрёстного типа</a>
                         </li>
                         <li class="header__search--item">
                             <a href="#"
                                class="header__search--element header__link header__dropdown--link header__point--link">Энтальпийные
                                 <span
-                                        class="header__link--color header__search--result"> рекуператоры</span>
+                                        class=" header__search--result"> рекуператоры</span>
                                 перекрёстного типа</a>
                         </li>
                         <li class="header__search--item">
                             <a href="#"
                                class="header__search--element header__link header__dropdown--link header__point--link">Пластинчатые
                                 <span
-                                        class="header__link--color header__search--result"> рекуператоры</span>
+                                        class=" header__search--result"> рекуператоры</span>
                                 противоточного типа</a>
                         </li>
                         <li class="header__search--item">
                             <a href="#"
                                class="header__search--element header__link header__dropdown--link header__point--link">Роторные
                                 <span
-                                        class="header__link--color header__search--result"> рекуператоры</span></a>
+                                        class=" header__search--result"> рекуператоры</span></a>
                         </li>
                         <li class="header__search--item">
                             <a href="search-results.html"
-                               class="header__search--more header__search--element header__link  header__link--color content-row header__search--link">Все
+                               class="header__search--more header__search--element header__link   content-row header__search--link">Все
                                 результаты
                                 <img src="img/home/arrow_menu.svg" alt="arrow"
                                      class="header__search--arrow header__arrow header__arrow--dropdown"></a>
@@ -163,7 +163,7 @@
                 <a class="header__tongue header__tongue--russia content-row" href="#">Рус <img
                         src="img/home/flag-russia.svg"
                         alt="Flag Russia"><img
-                        src="img/home/arrow_menu-black.svg" alt="arrow"></a>
+                        src="img/home/arrow_menu-black.svg" alt="arrow" class="header__tongue--icon"></a>
                 <div class="header__tongue--other">
                     <a class="content-row header__tongue header__tongue--border" href="#">Укр <img
                             src="img/home/flag-ukraine.svg" alt="Flag Ukraine"></a>
@@ -431,8 +431,8 @@
                                                                                             class="reach__button--icon">
                     </button>
                     <div class="content-row">
-                        <input type="checkbox" class="reach__checkbox">
-                        <label class="reach__label">Я согласен с условиями использования сайта
+                        <input type="checkbox" class="reach__checkbox" id="consent">
+                        <label for="consent" class="reach__label">Я согласен с условиями использования сайта
                             и политикой конфиденциальности</label>
                     </div>
 

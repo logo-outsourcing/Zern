@@ -21,7 +21,7 @@
     font-family: "Century Gothic Bold", sans-serif;
     font-size: 16px;
     font-weight: 700;
-    color: #ffe100;
+    color: #c6c7c7;
     text-decoration: none;
     padding: 14px 21px;
     position: relative;
@@ -31,9 +31,11 @@
     box-sizing: border-box;
     border: 1.0px solid rgba(255, 255, 255, 0.63);
     background: url("../../img/drives/link-background.png") no-repeat;
-
+    &:hover {
+      color: #ffe100;
+    }
     &--look {
-      color: #c6c7c7;
+
       padding: 14px 35px;
 
     }
@@ -207,7 +209,7 @@
       margin-bottom: 0;
     }
   }
-  &__modal{
+  &__modal {
     display: none;
     position: absolute;
     top: 0;
@@ -217,10 +219,10 @@
     z-index: 9;
     background-size: cover;
     background: url("../../img/drives/drives_modal.png") no-repeat;
-    &--open{
+    &--open {
       display: block;
     }
-    &--image{
+    &--image {
       position: absolute;
       top: 15%;
       left: 11%;
@@ -384,9 +386,11 @@
     top: auto;
     background-position: center;
   }
+
   .drives__text--right:after {
     transform: rotate(0);
   }
+
   .drives__button {
     left: 0;
     top: 60px;
@@ -413,9 +417,11 @@
   .drives__image--inner {
     width: 72%;
   }
+
   .drives .drives__more--left {
     flex-flow: wrap-reverse;
   }
+
   .drives__transform {
     transform: rotate(0deg);
   }

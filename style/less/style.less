@@ -90,14 +90,7 @@
     padding: 10px 0;
   }
 
-  .footer__menu {
-    margin: 0 auto 90px;
-  }
 
-  .footer__navigation:after {
-    height: 90px;
-    bottom: -90px;
-  }
 
   .footer__dropdown--item {
     padding: 0 0 0 10px;
@@ -113,13 +106,19 @@
     width: 76%;
   }
 }
+@media screen and (max-width: 1615px){
+  .footer__menu {
+    margin: 0 auto 90px;
+  }
 
+  .footer__navigation:after {
+    height: 90px;
+    bottom: -90px;
+  }
+}
 @media screen and (max-width: 1500px) {
   .footer__menu {
     width: 90%;
-  }
-
-  .footer__menu {
     margin: 0 auto 61px;
   }
 
@@ -131,7 +130,6 @@
   .footer__list {
     width: 89%;
   }
-
 }
 
 @media screen and (max-width: 1400px) {
@@ -197,7 +195,7 @@
   }
 
   .footer__dropdown--item {
-    padding: 0 10px;
+    padding: 0 0 0 10px;
     box-sizing: border-box;
   }
 
@@ -569,16 +567,16 @@
 
   .footer__line {
     width: 67%;
-    padding-top: 73px;
+    padding-top: 76px;
   }
 
   .footer__line:before {
     bottom: auto;
-    top: 49px;
+    top: 56px;
   }
 
   .footer__wrap {
-    padding: 20px 0;
+    padding: 15px 0 25px;
   }
 
   .header__modal .reach__input--company {
@@ -668,9 +666,12 @@
 
   .example__wrap {
     width: 100%;
-    background-size: cover;
+    margin-bottom: 30px;
+    padding: 38px 32px 27px 41px;
   }
-
+  .example__title {
+    margin-bottom: 9px;
+  }
   .reach__inner {
     width: 100%;
     flex-direction: column;
@@ -853,14 +854,8 @@
   .example__image {
     width: 68%;
   }
-
-  .example__wrap {
-
-    margin-bottom: 5px;
-  }
-
   .example {
-    padding-bottom: 75px;
+    padding-bottom: 8px;
   }
 
   .reach__sales {
@@ -1176,9 +1171,10 @@
   }
 
   .example__wrap {
-    padding: 43px 23px 8px;
+    padding: 43px 23px 33px;
+    margin-bottom: 36px;
     &--inner {
-      padding: 43px 25px 70px;
+      padding: 43px 25px 52px;
     }
   }
 
@@ -1199,10 +1195,6 @@
 
   .example__image {
     width: 100%;
-  }
-
-  .example__wrap {
-    margin-bottom: 17px;
   }
 
   .header__dropdown--item:hover .header__additionalMenu {
@@ -1334,6 +1326,9 @@
     flex-flow: wrap;
     padding: 0;
     justify-content: flex-start;
+  }
+  .header__search:before{
+    display: none;
   }
 
 }
