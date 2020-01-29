@@ -40,6 +40,48 @@
   }
   &__icon {
     margin-right: 10px;
+    &--catalog {
+      width: 16px;
+      height: 14px;
+      display: inline-block;
+      background: url("../../img/home/catalog.svg") no-repeat;
+    }
+    &--selector {
+      width: 17px;
+      height: 17px;
+      display: inline-block;
+      background: url("../../img/home/selector.svg") no-repeat;
+    }
+    &--contacts {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      background: url("../../img/home/contacts.svg") no-repeat;
+    }
+    &--about {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      background: url("../../img/home/about.svg") no-repeat;
+    }
+    &--reach {
+      width: 16px;
+      height: 16px;
+      display: inline-block;
+      background: url("../../img/home/reach.svg") no-repeat;
+    }
+    &--recuperators {
+      width: 23px;
+      height: 16px;
+      display: inline-block;
+      background: url("../../img/home/recuperators.svg") no-repeat;
+    }
+    &--drives {
+      width: 26px;
+      height: 26px;
+      display: inline-block;
+      background: url("../../img/home/drives.svg") no-repeat;
+    }
   }
   &__arrow {
     margin-left: 15px;
@@ -111,7 +153,7 @@
     &--border {
       border-bottom: 1px solid #c17600;
     }
-    &--icon{
+    &--icon {
       margin-bottom: 4px;
     }
   }
@@ -126,6 +168,7 @@
     display: none;
     &--link {
       color: #70747b;
+      align-items: center;
     }
     &--item {
       position: relative;
@@ -135,8 +178,44 @@
     display: none;
     &--icon {
       margin-right: 10%;
-      width: 39px;
-      text-align: center;
+      width: 67px;
+    }
+    &--recuperators1 {
+      height: 36px;
+      display: inline-block;
+      background-position: center;
+      background: url("../../img/home/recuperators-1.svg") no-repeat;
+    }
+    &--recuperators2 {
+      height: 36px;
+      display: inline-block;
+      background-position: center;
+      background: url("../../img/home/recuperators-2.svg") no-repeat;
+    }
+    &--recuperators3 {
+      height: 32px;
+      display: inline-block;
+      background-position: center;
+      background: url("../../img/home/recuperators-3.svg") no-repeat;
+    }
+    &--recuperators4 {
+      height: 34px;
+      display: inline-block;
+      background-position: center;
+      background: url("../../img/home/recuperators-4.svg") no-repeat;
+    }
+    &--recuperators5 {
+      height: 34px;
+      display: inline-block;
+      background-position: center;
+      background: url("../../img/home/recuperators-5.svg") no-repeat;
+    }
+    &--recuperators6 {
+      height: 32px;
+      width: 40px;
+      display: inline-block;
+      background-position: center;
+      background: url("../../img/home/recuperators-6.svg") no-repeat;
     }
   }
   &__element {
@@ -160,10 +239,10 @@
     &--link {
       justify-content: space-between;
     }
-    &--result{
+    &--result {
       color: #f5c90e;
     }
-    &--more{
+    &--more {
       color: #f5c90e;
     }
   }
@@ -245,15 +324,71 @@
     }
   }
 }
-.header__item:hover .header__link--color{
-    color: #f5c90e;
+
+.header__item:hover .header__icon--catalog {
+  background: url("../../img/home/icon-hover/catalog.svg") no-repeat;
 }
-.header__element:hover .header__dropdown--link{
+
+.header__item:hover .header__icon--selector {
+  background: url("../../img/home/icon-hover/selector.svg") no-repeat;
+}
+
+.header__item:hover .header__icon--about {
+  background: url("../../img/home/icon-hover/about.svg") no-repeat;
+}
+
+.header__item:hover .header__icon--contacts {
+  background: url("../../img/home/icon-hover/contacts.svg") no-repeat;
+}
+
+.header__item:hover .header__icon--reach {
+  background: url("../../img/home/icon-hover/reach.svg") no-repeat;
+}
+
+.header__element:hover .header__icon--recuperators {
+  background: url("../../img/home/icon-hover/recuperators.svg") no-repeat;
+}
+
+.header__element:hover .header__icon--drives {
+  background: url("../../img/home/icon-hover/drives.svg") no-repeat;
+}
+
+.header__point:hover .header__additionalMenu--recuperators1 {
+  background: url("../../img/home/icon-hover/recuperators1.svg") no-repeat;
+}
+
+.header__point:hover .header__additionalMenu--recuperators2 {
+  background: url("../../img/home/icon-hover/recuperators2.svg") no-repeat;
+}
+
+.header__point:hover .header__additionalMenu--recuperators3 {
+  background: url("../../img/home/icon-hover/recuperators3.svg") no-repeat;
+}
+
+.header__point:hover .header__additionalMenu--recuperators4 {
+  background: url("../../img/home/icon-hover/recuperators4.svg") no-repeat;
+}
+
+.header__point:hover .header__additionalMenu--recuperators5 {
+  background: url("../../img/home/icon-hover/recuperators5.svg") no-repeat;
+}
+
+.header__point:hover .header__additionalMenu--recuperators6 {
+  background: url("../../img/home/icon-hover/recuperators6.svg") no-repeat;
+}
+
+.header__item:hover .header__link--color {
   color: #f5c90e;
 }
-.header__point:hover .header__point--link{
+
+.header__element:hover .header__dropdown--link {
   color: #f5c90e;
 }
+
+.header__point:hover .header__point--link {
+  color: #f5c90e;
+}
+
 .header__modal .header__modal--input {
   border: 1.0px solid #c5c5c5;
   background-color: #eeeeee;
@@ -376,7 +511,7 @@
   box-sizing: border-box;
   border-top: 1px solid #454b4f;
   box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
-  &:before{
+  &:before {
     content: "";
     width: 100%;
     height: 20px;
@@ -608,7 +743,7 @@
     width: 49%;
     padding: 49px 32px 0 36px;
     box-sizing: border-box;
-    box-shadow: 0 4px 15px 0 rgba(0,0,0,0.25);
+    box-shadow: 0 4px 15px 0 rgba(0, 0, 0, 0.25);
     background-position: top;
     background: url("../../img/home/example-background.png") no-repeat;
     background-size: cover;
@@ -876,16 +1011,17 @@
     }
   }
 }
-.reach .reach__button{
+
+.reach .reach__button {
   font-size: 15px;
   border-color: #d0e0cc;
   color: #292929;
-  background: -moz-linear-gradient(left, rgba(233,198,49,1) 0%, rgba(230,193,39,1) 100%);
-  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(233,198,49,1)), color-stop(100%, rgba(230,193,39,1)));
-  background: -webkit-linear-gradient(left, rgba(233,198,49,1) 0%, rgba(230,193,39,1) 100%);
-  background: -o-linear-gradient(left, rgba(233,198,49,1) 0%, rgba(230,193,39,1) 100%);
-  background: -ms-linear-gradient(left, rgba(233,198,49,1) 0%, rgba(230,193,39,1) 100%);
-  background: linear-gradient(to right, rgba(233,198,49,1) 0%, rgba(230,193,39,1) 100%);
+  background: -moz-linear-gradient(left, rgba(233, 198, 49, 1) 0%, rgba(230, 193, 39, 1) 100%);
+  background: -webkit-gradient(left top, right top, color-stop(0%, rgba(233, 198, 49, 1)), color-stop(100%, rgba(230, 193, 39, 1)));
+  background: -webkit-linear-gradient(left, rgba(233, 198, 49, 1) 0%, rgba(230, 193, 39, 1) 100%);
+  background: -o-linear-gradient(left, rgba(233, 198, 49, 1) 0%, rgba(230, 193, 39, 1) 100%);
+  background: -ms-linear-gradient(left, rgba(233, 198, 49, 1) 0%, rgba(230, 193, 39, 1) 100%);
+  background: linear-gradient(to right, rgba(233, 198, 49, 1) 0%, rgba(230, 193, 39, 1) 100%);
   border-width: 1px;
   text-transform: capitalize;
 }
@@ -931,33 +1067,37 @@
   background: #454b4f;
   box-shadow: none;
 }
-.gm-style-iw .gm-ui-hover-effect{
-  background-image: url("../../img/home/exit.png")!important;
-  background-repeat: no-repeat!important;
-  background-position: center!important;
+
+.gm-style-iw .gm-ui-hover-effect {
+  background-image: url("../../img/home/exit.png") !important;
+  background-repeat: no-repeat !important;
+  background-position: center !important;
 }
-.gm-style-iw .gm-ui-hover-effect img{
-  display: none!important;
+
+.gm-style-iw .gm-ui-hover-effect img {
+  display: none !important;
 }
+
 .reach__map .gm-style-iw-d {
   overflow: hidden !important;
 }
+
 input[type="checkbox"]:checked,
-input[type="checkbox"]:not(:checked)
-{
+input[type="checkbox"]:not(:checked) {
   position: absolute;
   left: -9999px;
 }
 
 input[type="checkbox"]:checked + label,
-input[type="checkbox"]:not(:checked) + label{
+input[type="checkbox"]:not(:checked) + label {
   display: inline-block;
   position: relative;
   padding-left: 28px;
   cursor: pointer;
 }
+
 input[type="checkbox"]:checked + label:before,
-input[type="checkbox"]:not(:checked) + label:before{
+input[type="checkbox"]:not(:checked) + label:before {
   content: "";
   position: absolute;
   left: 0;
@@ -972,8 +1112,9 @@ input[type="checkbox"]:checked + label:before,
 input[type="checkbox"]:not(:checked) + label:before {
   border-radius: 2px;
 }
+
 input[type="checkbox"]:checked + label:after,
-input[type="checkbox"]:not(:checked) + label:after{
+input[type="checkbox"]:not(:checked) + label:after {
   content: "";
   position: absolute;
   -webkit-transition: all 0.2s ease;
@@ -997,15 +1138,16 @@ input[type="checkbox"]:not(:checked) + label:after {
   -ms-transform: rotate(-45deg);
   transform: rotate(-45deg);
 }
-input[type="checkbox"]:not(:checked) + label:after{
+
+input[type="checkbox"]:not(:checked) + label:after {
   opacity: 0;
 }
 
-input[type="checkbox"]:checked + label:after{
+input[type="checkbox"]:checked + label:after {
   opacity: 1;
 }
 
-  .footer {
+.footer {
   &__navigation {
     box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.15);
     background-color: #2e3134;
@@ -1119,7 +1261,7 @@ input[type="checkbox"]:checked + label:after{
     }
 
   }
-  &__dropdown:not(:last-child){
+  &__dropdown:not(:last-child) {
     margin-bottom: 6px;
   }
   &__wrap {

@@ -8,7 +8,6 @@ $(".header__modal--open").fancybox({
     'hideOnContentClick': true
 });
 
-
 $('.banner__slider').slick({
     dots: true,
     arrows: true,
