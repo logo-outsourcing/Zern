@@ -3,6 +3,26 @@
   background-size: cover;
   background-position: center bottom;
   padding: 298px 0 577px;
+  position: relative;
+  &__partners {
+    position: absolute;
+    bottom: 3%;
+    left: 0;
+    width: 100%;
+  }
+  &__inner {
+    justify-content: space-around;
+    align-items: flex-end;
+  }
+  &__image {
+    width: 20%;
+    &--big {
+      width: 22%;
+    }
+    &--small {
+      width: 18%;
+    }
+  }
   &__text {
     font-family: 'Century Gothic Bold', sans-serif;
     font-size: 300px;
@@ -48,7 +68,7 @@
 @media screen and (max-width: 1024px) {
   .error {
     height: 92%;
-    &__wrap{
+    &__wrap {
       height: 80%;
       box-sizing: border-box;
       display: flex;
@@ -56,10 +76,10 @@
       justify-content: center;
       align-items: center;
     }
-    &__body{
+    &__body {
       height: 100%;
     }
-    &__html{
+    &__html {
       height: 100%;
     }
   }
@@ -75,6 +95,10 @@
 @media screen and (max-width: 768px) {
   .error {
     padding: 74px 0 170px;
+  }
+
+  .error__image {
+    width: 15%;
   }
 
   .error__text {
