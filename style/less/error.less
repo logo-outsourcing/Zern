@@ -47,14 +47,20 @@
 
 @media screen and (max-width: 1024px) {
   .error {
-    padding: 0;
-    height: calc(100vh - 73px);
+    height: 92%;
     &__wrap{
       height: 80%;
+      box-sizing: border-box;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+    }
+    &__body{
+      height: 100%;
+    }
+    &__html{
+      height: 100%;
     }
   }
 
@@ -67,9 +73,9 @@
 }
 
 @media screen and (max-width: 768px) {
-  //.error {
-  //  padding: 74px 0 170px;
-  //}
+  .error {
+    padding: 74px 0 170px;
+  }
 
   .error__text {
     font-size: 170px;
@@ -91,7 +97,7 @@
   }
 
   .error {
-    //padding: 55px 0 106px;
+    padding: 55px 0 106px;
     background-position: center bottom;
   }
 
